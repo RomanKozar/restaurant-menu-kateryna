@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dublin - Меню</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<h1>Kateryna</h1>
+			<button class="info-btn" onclick="openInfoModal()">ⓘ</button>
+		</div>
+
+		<div class="container" id="menuContainer">
+			<!-- Секції меню будуть додаватися динамічно через JS -->
+		</div>
+
+		<!-- Dish Modal -->
+		<div class="modal" id="dishModal">
+			<div class="modal-content">
+				<button class="close-btn" onclick="closeModal()">✕</button>
+				<img class="modal-image" id="modalImage" src="" alt="" />
+				<h2 class="modal-title" id="modalTitle"></h2>
+				<div class="modal-details">
+					<div><strong>Вага:</strong> <span id="modalWeight"></span></div>
+					<div>
+						<strong>Час приготування:</strong> <span id="modalTime"></span>
+					</div>
+				</div>
+				<p class="modal-description" id="modalDescription"></p>
+				<div class="modal-footer">
+					<div class="quantity-control">
+						<button onclick="decreaseQuantity()">−</button>
+						<span>Кількість: <span id="quantity">1</span></span>
+						<button onclick="increaseQuantity()">+</button>
+					</div>
+					<div class="modal-price-section">
+						<div class="modal-price-label">Разом:</div>
+						<div class="modal-price">₴ <span id="modalPrice"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Info Modal -->
+		<div class="modal" id="infoModal">
+			<div class="info-modal-content">
+				<button class="close-btn" onclick="closeInfoModal()">✕</button>
+				<h2>Контакти</h2>
+				<div class="info-item">
+					<strong>📞 Телефон:</strong>
+					<a href="tel:+380123456789">+380 12 345 67 89</a>
+				</div>
+				<div class="info-item">
+					<strong>📍 Адреса:</strong>
+					<p>вул. Хрещатик, 1<br />Київ, Україна</p>
+				</div>
+				<div class="info-item">
+					<strong>🕒 Години роботи:</strong>
+					<p>Пн-Нд: 09:00 - 23:00</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="menuData.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
