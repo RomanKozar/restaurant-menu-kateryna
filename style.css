@@ -79,6 +79,28 @@ body {
 	letter-spacing: 2px;
 }
 
+.breakfast-note,
+.breakfast-note-secondary {
+	background-color: #fff2cc; /* ніжний бежевий фон */
+	color: #5a4200;
+	font-style: italic;
+	text-align: center;
+	padding: 6px 12px;
+	border: 1px solid #e0c97f;
+	width: 100%;
+	margin: 0;
+}
+
+.breakfast-note {
+	border-bottom: none; /* прибираємо лінію між блоками */
+	border-radius: 8px 8px 0 0; /* заокруглення зверху */
+}
+
+.breakfast-note-secondary {
+	border-top: none; /* прибираємо верхній бордер другого */
+	border-radius: 0 0 8px 8px; /* заокруглення знизу */
+}
+
 .toggle-icon {
 	position: absolute;
 	right: 30px;
@@ -96,7 +118,7 @@ body {
 
 .section-content.open {
 	padding: 0px 30px 30px 30px;
-	margin-bottom: 25px; /* 👈 додає відступ знизу коли секція відкрита */
+	margin-bottom: 15px; /* 👈 додає відступ знизу коли секція відкрита */
 }
 
 .time-notice {
@@ -109,7 +131,7 @@ body {
 .menu-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 7px;
+	gap: 3px;
 }
 
 .menu-item {
@@ -120,6 +142,7 @@ body {
 	border-radius: 8px;
 	cursor: pointer;
 	transition: transform 0.2s, box-shadow 0.2s;
+	margin-top: 6px;
 }
 
 .menu-item:hover {

@@ -14,14 +14,15 @@ const menuSections = {
 	desserts: 'ДЕСЕРТИ (6)',
 	vodka: 'ГОРІЛОЧКА (3)',
 	variousVodka: 'УСІЛЯКІ ПАЛЕНКИ (2)',
-	whiskey: 'ВІСКІ (1)',
-	cognac: 'КОНЬЯК (1)',
 	wine: 'ВИНА (6)',
 	beer: 'ПИВО (5)',
 	coldDrinks: 'ХОЛОДНІ НАПОЇ (9)',
 	hotDrinks: 'ГАРЯЧІ НАПОЇ (11)',
 	extras: 'ДОДАТКИ (8)',
 }
+
+let currentDish = null
+let quantity = 1
 
 function renderMenuSections() {
 	const container = document.getElementById('menuContainer')
@@ -36,7 +37,13 @@ function renderMenuSections() {
 		const sectionTitle = document.createElement('h2')
 		sectionTitle.className = 'section-title'
 		sectionTitle.textContent = menuSections[key]
+
+		const toggleIcon = document.createElement('span')
+		toggleIcon.className = 'toggle-icon'
+		toggleIcon.textContent = '▼'
+
 		sectionHeader.appendChild(sectionTitle)
+		sectionHeader.appendChild(toggleIcon)
 
 		const sectionContent = document.createElement('div')
 		sectionContent.className = 'section-content'
@@ -46,6 +53,21 @@ function renderMenuSections() {
 		grid.className = 'menu-grid'
 		grid.id = key + '-grid'
 
+		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ СНІДАНКІВ
+		if (key === 'breakfast') {
+			const breakfastNote1 = document.createElement('p')
+			breakfastNote1.className = 'breakfast-note'
+			breakfastNote1.textContent = 'Сніданки доступні лише до 12:00'
+
+			const breakfastNote2 = document.createElement('p')
+			breakfastNote2.className = 'breakfast-note-secondary'
+			breakfastNote2.textContent =
+				'До будь-якого сніданку входить чай, кава або компот на вибір'
+
+			sectionContent.appendChild(breakfastNote1)
+			sectionContent.appendChild(breakfastNote2)
+		}
+
 		sectionContent.appendChild(grid)
 		sectionDiv.appendChild(sectionHeader)
 		sectionDiv.appendChild(sectionContent)
@@ -53,15 +75,6 @@ function renderMenuSections() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	renderMenuSections()
-	renderMenu() // виклик твого script.js функцій для рендеру страв
-})
-
-let currentDish = null
-let quantity = 1
-
-// Рендеримо всі секції автоматично
 function renderMenu() {
 	for (const section in menuData) {
 		renderSection(section, section + '-grid')
@@ -79,7 +92,7 @@ function renderSection(section, gridId) {
 		item.onclick = () => openModal(section, index)
 
 		item.innerHTML = `
-            <img src="${dish.image}" alt="${dish.name}">
+            <img src="${dish.image}" alt="${dish.nameUk || dish.name}">
             <div class="item-info">
                 <div class="item-name">
                     ${dish.nameUk || dish.name}
@@ -91,11 +104,30 @@ function renderSection(section, gridId) {
 										: ''
 								}
             </div>
-            <div class="item-price">${dish.price.toFixed(2)}</div>
+            <div class="item-price">₴${dish.price.toFixed(2)}</div>
         `
 
 		grid.appendChild(item)
 	})
+}
+
+function toggleSection(sectionId) {
+	const content = document.getElementById(sectionId + '-content')
+	if (!content) return
+
+	// ⭐ ЗНАХОДИМО ІКОНКУ В HEADER
+	const header = content.previousElementSibling
+	const icon = header.querySelector('.toggle-icon')
+
+	content.classList.toggle('open')
+
+	if (content.classList.contains('open')) {
+		content.style.maxHeight = content.scrollHeight + 'px'
+		if (icon) icon.style.transform = 'rotate(180deg)'
+	} else {
+		content.style.maxHeight = null
+		if (icon) icon.style.transform = 'rotate(0deg)'
+	}
 }
 
 function openModal(section, index) {
@@ -127,19 +159,6 @@ function closeInfoModal() {
 	document.getElementById('infoModal').classList.remove('active')
 }
 
-// Toggle секції (можна відкривати кілька одночасно)
-function toggleSection(sectionId) {
-	const content = document.getElementById(sectionId + '-content')
-	if (!content) return
-
-	content.classList.toggle('open')
-	if (content.classList.contains('open')) {
-		content.style.maxHeight = content.scrollHeight + 'px'
-	} else {
-		content.style.maxHeight = null
-	}
-}
-
 function increaseQuantity() {
 	quantity++
 	document.getElementById('quantity').textContent = quantity
@@ -159,13 +178,17 @@ function updatePrice() {
 	document.getElementById('modalPrice').textContent = total
 }
 
-// Закриття модалок при кліку на фон
-document.getElementById('dishModal').addEventListener('click', function (e) {
-	if (e.target === this) closeModal()
-})
+// ⭐ ОДИН ЄДИНИЙ ВХІД
+document.addEventListener('DOMContentLoaded', () => {
+	renderMenuSections()
+	renderMenu()
 
-document.getElementById('infoModal').addEventListener('click', function (e) {
-	if (e.target === this) closeInfoModal()
-})
+	// Event listeners для модалок
+	document.getElementById('dishModal').addEventListener('click', function (e) {
+		if (e.target === this) closeModal()
+	})
 
-document.addEventListener('DOMContentLoaded', renderMenu)
+	document.getElementById('infoModal').addEventListener('click', function (e) {
+		if (e.target === this) closeInfoModal()
+	})
+})
