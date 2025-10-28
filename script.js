@@ -1,7 +1,8 @@
 const menuSections = {
 	breakfast: 'СНІДАНКИ (8)',
 	troutDishes: 'СТРАВИ З ФОРЕЛІ (9)',
-	coldAppetizers: 'ХОЛОДНІ ЗАКУСКИ (10)',
+	coldAppetizers: 'ХОЛОДНІ ЗАКУСКИ (3)',
+	beerSnacks: 'ЗАКУСКИ ДО ПИВА (7)',
 	firstCourses: 'ПЕРШІ СТРАВИ (4)',
 	salads: 'САЛАТИ (7)',
 	sides: 'ГАРНІРИ (5)',
@@ -13,10 +14,10 @@ const menuSections = {
 	pizzas: 'ПІЦИ (6)',
 	desserts: 'ДЕСЕРТИ (6)',
 	vodka: 'ГОРІЛОЧКА (3)',
-	variousVodka: 'УСІЛЯКІ ПАЛЕНКИ (2)',
+	variousVodka: 'УСІЛЯКІ ПАЛЕНКИ (4)',
 	wine: 'ВИНА (6)',
 	beer: 'ПИВО (5)',
-	coldDrinks: 'ХОЛОДНІ НАПОЇ (9)',
+	coldDrinks: 'ХОЛОДНІ НАПОЇ (12)',
 	hotDrinks: 'ГАРЯЧІ НАПОЇ (11)',
 	extras: 'ДОДАТКИ (8)',
 }
@@ -66,6 +67,29 @@ function renderMenuSections() {
 
 			sectionContent.appendChild(breakfastNote1)
 			sectionContent.appendChild(breakfastNote2)
+		}
+		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ ЛАВАШІВ-ГРИЛЬ
+		if (key === 'lavashGrill') {
+			const lavashGrillNote = document.createElement('p')
+			lavashGrillNote.className = 'breakfast-note'
+			lavashGrillNote.textContent =
+				'До кожного лавашу подається картопля фрі та соус на вибір (кетчуп, BBQ або часниковий).'
+			sectionContent.appendChild(lavashGrillNote)
+		}
+		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ ОСНОВНИХ СТРАВ
+		if (key === 'mainDishes') {
+			const mainDishesNote = document.createElement('p')
+			mainDishesNote.className = 'breakfast-note'
+			mainDishesNote.textContent =
+				'При замовленні основної страви обирай будь-який гарнір безкоштовно'
+			sectionContent.appendChild(mainDishesNote)
+		}
+		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ СТРАВ НА МАНГАЛІ
+		if (key === 'grillDishes') {
+			const grillDishesNote = document.createElement('p')
+			grillDishesNote.className = 'breakfast-note'
+			grillDishesNote.textContent = 'Мінімальне замовлення – 200 грам.'
+			sectionContent.appendChild(grillDishesNote)
 		}
 
 		sectionContent.appendChild(grid)
