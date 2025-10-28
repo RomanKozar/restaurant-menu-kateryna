@@ -1232,7 +1232,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: натуральний квітковий мед',
-			image: 'images/extras/med.png',
+			image: 'images/extras/med.jpg',
 		},
 		{
 			nameUk: 'Вершки порційні',
