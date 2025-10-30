@@ -1,4 +1,60 @@
 const menuData = {
+	troutFishing: [
+		{
+			nameUk: 'Вилов форелі самостійно',
+			price: 49,
+			weight: '100 г',
+			time: '20 хв',
+			description:
+				'Ви можете самостійно виловити свіжу форель у нашому ставку — це справжнє задоволення для любителів активного відпочинку. Риба відразу потрапляє на кухню для подальшого приготування або очищення за вашим бажанням.',
+			image: 'images/troutFishing/troutFishing.jpg',
+		},
+		{
+			nameUk: 'Чистка форелі',
+			price: 20,
+			weight: '-',
+			time: '10 хв',
+			description:
+				'Наші кухарі професійно очистять виловлену вами форель, щоб ви могли забрати її з собою. Ідеально для тих, хто цінує зручність і чистоту.',
+			image: 'images/troutFishing/сleaningTrout.jpg',
+		},
+		{
+			nameUk: 'Приготування форелі зі спеціями',
+			price: 40,
+			weight: '100 г',
+			time: '40 хв',
+			description:
+				'Соковита форель, приготована зі спеціями для риби, меленим перцем та сіллю. Просте, але вишукане поєднання, яке підкреслює природний смак свіжої риби.',
+			image: 'images/troutFishing/troutWithSpices.png',
+		},
+		{
+			nameUk: 'Приготування форелі з овочами',
+			price: 45,
+			weight: '100 г',
+			time: '40 хв',
+			description:
+				'Ніжна форель у поєднанні з овочевим жульєном із болгарського перцю, цибулі, кабачка, моркви та баклажану. Страва насичена ароматами літа й чудово смакує як основна.',
+			image: 'images/troutFishing/troutWithVegetables.jpg',
+		},
+		{
+			nameUk: 'Приготування форелі з цибулею',
+			price: 45,
+			weight: '100 г',
+			time: '40 хв',
+			description:
+				'Форель, запечена з маринованою цибулею, зеленню, сіллю та перцем. Страва має приємну пікантність і насичений аромат, який чудово доповнює ніжне м’ясо риби.',
+			image: 'images/troutFishing/troutWithOnion.png',
+		},
+		{
+			nameUk: 'Приготування форелі з грибами',
+			price: 50,
+			weight: '100 г',
+			time: '40 хв',
+			description:
+				'Делікатна форель із двома видами грибів — білими та шампіньйонами, тушкованими у вершковому соусі з легкою ноткою солі. Вишуканий смак для справжніх гурманів.',
+			image: 'images/troutFishing/troutWithMushrooms.png',
+		},
+	],
 	breakfast: [
 		{
 			nameUk: 'Сніданок №1',
@@ -6,8 +62,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Яєшня з сосискою, сиром та овочами',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №1</text></svg>",
+			image: 'images/breakfast/breakfast1.png',
 		},
 		{
 			nameUk: 'Сніданок №2',
@@ -15,8 +70,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Відварені яйця, тости з маслом, сиром, ковбасою та овочами',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №2</text></svg>",
+			image: 'images/breakfast/breakfast2.png',
 		},
 		{
 			nameUk: 'Сніданок №3',
@@ -24,8 +78,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Домашні сирники зі сметаною та джемом',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №3</text></svg>",
+			image: 'images/breakfast/breakfast3.png',
 		},
 		{
 			nameUk: 'Сніданок №4',
@@ -33,8 +86,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Смачні творожні гомбовці зі сметаною та шоколадом',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №4</text></svg>",
+			image: 'images/breakfast/breakfast4.png',
 		},
 		{
 			nameUk: 'Сніданок №5',
@@ -42,8 +94,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Яєшня бовтунка з шинкою, сиром та овочами',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №5</text></svg>",
+			image: 'images/breakfast/breakfast5.png',
 		},
 		{
 			nameUk: 'Сніданок №6',
@@ -51,8 +102,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Омлет з сосискою, сиром та овочами',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №6</text></svg>",
+			image: 'images/breakfast/breakfast6.png',
 		},
 		{
 			nameUk: 'Сніданок №7',
@@ -61,8 +111,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Смачна каша на вибір: рисова, гречана, вівсяна, з родзинками та фруктами',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №7</text></svg>",
+			image: 'images/breakfast/breakfast7.png',
 		},
 		{
 			nameUk: 'Сніданок №8',
@@ -70,8 +119,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Млинці з домашнім сиром або млинці з джемом',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='24'>Сніданок №8</text></svg>",
+			image: 'images/breakfast/breakfast8.png',
 		},
 	],
 

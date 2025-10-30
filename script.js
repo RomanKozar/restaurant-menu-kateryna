@@ -1,4 +1,5 @@
 const menuSections = {
+	troutFishing: 'ЛОВЛЯ ФОРЕЛІ (6)',
 	breakfast: 'СНІДАНКИ (8)',
 	troutDishes: 'СТРАВИ З ФОРЕЛІ (9)',
 	coldAppetizers: 'ХОЛОДНІ ЗАКУСКИ (3)',
@@ -91,6 +92,14 @@ function renderMenuSections() {
 			grillDishesNote.textContent = 'Мінімальне замовлення – 200 грам.'
 			sectionContent.appendChild(grillDishesNote)
 		}
+		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ ЛОВЛІ ФОРЕЛІ
+		if (key === 'troutFishing') {
+			const troutFishingNote = document.createElement('p')
+			troutFishingNote.className = 'breakfast-note'
+			troutFishingNote.textContent =
+				'Ви можете самостійно зловити свіжу форель у нашому ставку та обрати - приготувати її в ресторані або забрати почищеною з собою. Форель не підлягає відпуску. Ціна вказана за 100 грамів живої ваги риби.'
+			sectionContent.appendChild(troutFishingNote)
+		}
 
 		sectionContent.appendChild(grid)
 		sectionDiv.appendChild(sectionHeader)
@@ -128,7 +137,7 @@ function renderSection(section, gridId) {
 										: ''
 								}
             </div>
-            <div class="item-price">₴${dish.price.toFixed(2)}</div>
+            <div class="item-price">₴ ${dish.price.toFixed(2)}</div>
         `
 
 		grid.appendChild(item)
