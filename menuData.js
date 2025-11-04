@@ -1153,24 +1153,24 @@ const menuData = {
 				'Склад: ром, м’ята, лайм, цукор, спрайт, лід. Класичний освіжаючий коктейль.',
 			image: 'images/coldDrinks/lymonad-mokhito.jpg',
 		},
-		{
-			nameUk: 'Еспресо тонік',
-			price: 90,
-			weight: '350 мл',
-			time: '5 хв',
-			description:
-				'Склад: еспресо, тонік, лід. Незвичайне поєднання кавової гірчинки й освіжаючої свіжості.',
-			image: 'images/coldDrinks/espreso-tonyk.jpg',
-		},
-		{
-			nameUk: 'Шмель',
-			price: 90,
-			weight: '350 мл',
-			time: '5 хв',
-			description:
-				'Склад: еспресо, апельсиновий сік, лід. Яскравий напій із цитрусовим смаком.',
-			image: 'images/coldDrinks/shmel.jpg',
-		},
+		// {
+		// 	nameUk: 'Еспресо тонік',
+		// 	price: 90,
+		// 	weight: '350 мл',
+		// 	time: '5 хв',
+		// 	description:
+		// 		'Склад: еспресо, тонік, лід. Незвичайне поєднання кавової гірчинки й освіжаючої свіжості.',
+		// 	image: 'images/coldDrinks/espreso-tonyk.jpg',
+		// },
+		// {
+		// 	nameUk: 'Шмель',
+		// 	price: 90,
+		// 	weight: '350 мл',
+		// 	time: '5 хв',
+		// 	description:
+		// 		'Склад: еспресо, апельсиновий сік, лід. Яскравий напій із цитрусовим смаком.',
+		// 	image: 'images/coldDrinks/shmel.jpg',
+		// },
 	],
 	hotDrinks: [
 		{

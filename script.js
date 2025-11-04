@@ -1,26 +1,26 @@
 const menuSections = {
-	troutFishing: 'ЛОВЛЯ ФОРЕЛІ (6)',
-	breakfast: 'СНІДАНКИ (8)',
-	troutDishes: 'СТРАВИ З ФОРЕЛІ (9)',
-	coldAppetizers: 'ХОЛОДНІ ЗАКУСКИ (3)',
-	beerSnacks: 'ЗАКУСКИ ДО ПИВА (7)',
-	firstCourses: 'ПЕРШІ СТРАВИ (4)',
-	salads: 'САЛАТИ (7)',
-	sides: 'ГАРНІРИ (5)',
-	hotAppetizers: 'ГАРЯЧІ ЗАКУСКИ (10)',
-	sauces: 'СОУСИ ДО СТРАВ (3)',
-	grillDishes: 'СТРАВИ НА МАНГАЛІ (8)',
-	mainDishes: 'ОСНОВНІ СТРАВИ (4)',
-	lavashGrill: 'ЛАВАШІ-ГРИЛЬ (4)',
-	pizzas: 'ПІЦИ (6)',
-	desserts: 'ДЕСЕРТИ (6)',
-	vodka: 'ГОРІЛОЧКА (3)',
-	variousVodka: 'УСІЛЯКІ ПАЛЕНКИ (4)',
-	wine: 'ВИНА (6)',
-	beer: 'ПИВО (5)',
-	coldDrinks: 'ХОЛОДНІ НАПОЇ (12)',
-	hotDrinks: 'ГАРЯЧІ НАПОЇ (11)',
-	extras: 'ДОДАТКИ (8)',
+	troutFishing: 'ЛОВЛЯ ФОРЕЛІ',
+	breakfast: 'СНІДАНКИ',
+	troutDishes: 'СТРАВИ З ФОРЕЛІ',
+	coldAppetizers: 'ХОЛОДНІ ЗАКУСКИ',
+	beerSnacks: 'ЗАКУСКИ ДО ПИВА',
+	firstCourses: 'ПЕРШІ СТРАВИ',
+	salads: 'САЛАТИ',
+	sides: 'ГАРНІРИ',
+	hotAppetizers: 'ГАРЯЧІ ЗАКУСКИ ',
+	sauces: 'СОУСИ ДО СТРАВ',
+	grillDishes: 'СТРАВИ НА МАНГАЛІ',
+	mainDishes: 'ОСНОВНІ СТРАВИ',
+	lavashGrill: 'ЛАВАШІ-ГРИЛЬ',
+	pizzas: 'ПІЦИ',
+	desserts: 'ДЕСЕРТИ',
+	vodka: 'ГОРІЛОЧКА',
+	variousVodka: 'УСІЛЯКІ ПАЛЕНКИ',
+	wine: 'ВИНА',
+	beer: 'ПИВО',
+	coldDrinks: 'ХОЛОДНІ НАПОЇ',
+	hotDrinks: 'ГАРЯЧІ НАПОЇ',
+	extras: 'ДОДАТКИ',
 }
 
 let currentDish = null
@@ -59,7 +59,7 @@ function renderMenuSections() {
 		if (key === 'breakfast') {
 			const breakfastNote1 = document.createElement('p')
 			breakfastNote1.className = 'breakfast-note'
-			breakfastNote1.textContent = 'Сніданки доступні лише до 12:00'
+			breakfastNote1.textContent = 'Сніданки доступні до 12:00'
 
 			const breakfastNote2 = document.createElement('p')
 			breakfastNote2.className = 'breakfast-note-secondary'
