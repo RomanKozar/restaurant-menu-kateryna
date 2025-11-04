@@ -12,8 +12,9 @@ const admin = require('firebase-admin')
 const serviceAccount = require('./serviceAccountKey.json')
 
 // !!! 2.2. ПЕРЕВІРТЕ НАЗВУ ВАШОГО CLOUD STORAGE BUCKET !!!
-const GCLOUD_STORAGE_BUCKET_NAME =
-	'restaurant-menu-kateryna.firebasestorage.app'
+// const GCLOUD_STORAGE_BUCKET_NAME =
+// 	'restaurant-menu-kateryna.firebasestorage.app'
+const GCLOUD_STORAGE_BUCKET_NAME = 'restaurant-menu-kateryna.appspot.com'
 
 // !!! 2.3. ПЕРЕВІРТЕ ШЛЯХ ДО ВАШОЇ ЛОКАЛЬНОЇ ПАПКИ З ЗОБРАЖЕННЯМИ !!!
 const LOCAL_IMAGES_BASE_DIR = path.join(__dirname, 'images')

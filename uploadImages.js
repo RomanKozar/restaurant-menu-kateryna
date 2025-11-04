@@ -15,8 +15,9 @@ const serviceAccount = require('./serviceAccountKey.json')
 // !!! 2.2. ПЕРЕВІРТЕ НАЗВУ ВАШОГО CLOUD STORAGE BUCKET !!!
 // Її можна знайти в Консолі Firebase -> Storage.
 // Зазвичай має вигляд "ваш-project-id.appspot.com".
-const GCLOUD_STORAGE_BUCKET_NAME =
-	'restaurant-menu-kateryna.firebasestorage.app'
+// const GCLOUD_STORAGE_BUCKET_NAME =
+// 	'restaurant-menu-kateryna.firebasestorage.app'
+const GCLOUD_STORAGE_BUCKET_NAME = 'restaurant-menu-kateryna.appspot.com'
 
 // !!! 2.3. ПЕРЕВІРТЕ ШЛЯХ ДО ВАШОЇ ЛОКАЛЬНОЇ ПАПКИ З ЗОБРАЖЕННЯМИ !!!
 // Припускаємо, що папка 'images' знаходиться в тій же директорії, що й цей скрипт.
