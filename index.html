@@ -14,8 +14,6 @@
 		</div>
 
 		<div class="container" id="menuContainer">
-			<!-- Секції меню будуть додаватися динамічно через JS -->
-			<!-- Додайте попередній лоадер, поки завантажується меню -->
 			<p
 				id="loading-message"
 				style="text-align: center; margin-top: 50px; font-size: 1.2em"
@@ -59,7 +57,7 @@
 				<div class="info-item">
 					<strong>📞 Телефони:</strong>
 					<a href="tel:+380993377557">+380 99 337 75 57</a>
-					<br /><a href="tel:+380673460556">+380 67 346 05 56</a> <br /><a
+					<br /><a href="tel:+380673460556">+380 67 346 05 56</a> <br />
 						href="tel:+380980337755"
 						>+380 98 033 77 55</a
 					>
@@ -78,15 +76,14 @@
 		<!-- Firebase SDKs -->
 		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+		
 		<!-- Firebase Initialization -->
 		<script>
-			// Ваш Firebase configuration (скопіюйте з Firebase Console -> Project settings -> Your apps -> Web app)
 			const firebaseConfig = {
 				apiKey: 'AIzaSyDzPZIiMyshj3kuKEZZacKkv_p2kUszvDc',
 				authDomain: 'restaurant-menu-kateryna.firebaseapp.com',
 				projectId: 'restaurant-menu-kateryna',
-				//storageBucket: 'restaurant-menu-kateryna.firebasestorage.app',
-				storageBucket: 'restaurant-menu-kateryna.appspot.com', // <--- Ось це потрібно змінити!
+				storageBucket: 'restaurant-menu-kateryna.appspot.com',
 				messagingSenderId: '520157411003',
 				appId: '1:520157411003:web:63d4a2a0389dbf7d951b9e',
 				measurementId: 'G-BT35LPFRM3',
@@ -94,13 +91,15 @@
 
 			// Initialize Firebase
 			const app = firebase.initializeApp(firebaseConfig)
-			const db = app.firestore() // Ініціалізуємо Firestore для використання в script.js
+			const db = app.firestore()
+			
+			// ⭐ ДОДАЙТЕ ЦЕ - перевірка готовності
+			console.log('Firebase ініціалізовано, db готовий:', !!db)
 		</script>
 
-		<!-- Ваш власний скрипт, який буде використовувати Firebase - ТЕПЕР ПІСЛЯ ІНІЦІАЛІЗАЦІЇ -->
 		<script src="script.js"></script>
 
 		<!-- Vercel Analytics -->
-		<script src="/_vercel/insights/script.js"></script>
+		<script defer src="/_vercel/insights/script.js"></script>
 	</body>
 </html>
