@@ -1,6 +1,7 @@
 const menuData = {
 	troutFishing: [
 		{
+			id: 'troutFishing1',
 			nameUk: 'Вилов форелі самостійно',
 			price: 49,
 			weight: '100 г',
@@ -10,6 +11,7 @@ const menuData = {
 			image: 'images/troutFishing/troutFishing.webp',
 		},
 		{
+			id: 'troutFishing2',
 			nameUk: 'Чистка форелі',
 			price: 20,
 			weight: '-',
@@ -19,6 +21,7 @@ const menuData = {
 			image: 'images/troutFishing/сleaningTrout.webp',
 		},
 		{
+			id: 'troutFishing3',
 			nameUk: 'Приготування форелі зі спеціями',
 			price: 40,
 			weight: '100 г',
@@ -28,6 +31,7 @@ const menuData = {
 			image: 'images/troutFishing/troutWithSpices.webp',
 		},
 		{
+			id: 'troutFishing4',
 			nameUk: 'Приготування форелі з овочами',
 			price: 45,
 			weight: '100 г',
@@ -37,6 +41,7 @@ const menuData = {
 			image: 'images/troutFishing/troutWithVegetables.webp',
 		},
 		{
+			id: 'troutFishing5',
 			nameUk: 'Приготування форелі з цибулею',
 			price: 45,
 			weight: '100 г',
@@ -46,6 +51,7 @@ const menuData = {
 			image: 'images/troutFishing/troutWithOnion.webp',
 		},
 		{
+			id: 'troutFishing6',
 			nameUk: 'Приготування форелі з грибами',
 			price: 50,
 			weight: '100 г',
@@ -57,6 +63,7 @@ const menuData = {
 	],
 	breakfast: [
 		{
+			id: 'breakfast1',
 			nameUk: 'Сніданок №1',
 			price: 150,
 			weight: '400 г',
@@ -65,6 +72,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast1.webp',
 		},
 		{
+			id: 'breakfast2',
 			nameUk: 'Сніданок №2',
 			price: 150,
 			weight: '400 г',
@@ -73,6 +81,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast2.webp',
 		},
 		{
+			id: 'breakfast3',
 			nameUk: 'Сніданок №3',
 			price: 150,
 			weight: '400 г',
@@ -81,6 +90,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast3.webp',
 		},
 		{
+			id: 'breakfast4',
 			nameUk: 'Сніданок №4',
 			price: 150,
 			weight: '400 г',
@@ -89,6 +99,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast4.webp',
 		},
 		{
+			id: 'breakfast5',
 			nameUk: 'Сніданок №5',
 			price: 150,
 			weight: '400 г',
@@ -97,6 +108,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast5.webp',
 		},
 		{
+			id: 'breakfast6',
 			nameUk: 'Сніданок №6',
 			price: 150,
 			weight: '400 г',
@@ -105,6 +117,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast6.webp',
 		},
 		{
+			id: 'breakfast7',
 			nameUk: 'Сніданок №7',
 			price: 150,
 			weight: '400 г',
@@ -114,6 +127,7 @@ const menuData = {
 			image: 'images/breakfast/breakfast7.webp',
 		},
 		{
+			id: 'breakfast8',
 			nameUk: 'Сніданок №8',
 			price: 150,
 			weight: '400 г',
@@ -122,9 +136,9 @@ const menuData = {
 			image: 'images/breakfast/breakfast8.webp',
 		},
 	],
-
 	troutDishes: [
 		{
+			id: 'troutDish1',
 			nameUk: 'Шеф салат “Катерина”',
 			price: 247,
 			weight: '350 г',
@@ -135,6 +149,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Шеф салат “Катерина”</text></svg>",
 		},
 		{
+			id: 'troutDish2',
 			nameUk: 'Вареники з начинкою з форелі',
 			price: 134,
 			weight: '200 г',
@@ -145,6 +160,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Вареники з начинкою з форелі</text></svg>",
 		},
 		{
+			id: 'troutDish3',
 			nameUk: 'Фунчоза з форелі',
 			price: 275,
 			weight: '300 г',
@@ -155,6 +171,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Фунчоза з форелі</text></svg>",
 		},
 		{
+			id: 'troutDish4',
 			nameUk: 'Форель зі спеціями',
 			price: 105,
 			weight: '100 г',
@@ -165,6 +182,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель зі спеціями</text></svg>",
 		},
 		{
+			id: 'troutDish5',
 			nameUk: 'Форель з цибулею',
 			price: 109,
 			weight: '100 г',
@@ -175,6 +193,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель з цибулею</text></svg>",
 		},
 		{
+			id: 'troutDish6',
 			nameUk: 'Форель з овочами',
 			price: 118,
 			weight: '100 г',
@@ -185,6 +204,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель з овочами</text></svg>",
 		},
 		{
+			id: 'troutDish7',
 			nameUk: 'Форель з грибами',
 			price: 135,
 			weight: '100 г',
@@ -195,6 +215,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель з грибами</text></svg>",
 		},
 		{
+			id: 'troutDish8',
 			nameUk: 'Форель гарячого копчення',
 			price: 155,
 			weight: '100 г',
@@ -205,6 +226,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель гарячого копчення</text></svg>",
 		},
 		{
+			id: 'troutDish9',
 			nameUk: 'Філе у вершково-винному соусі',
 			price: 165,
 			weight: '100 г',
@@ -217,6 +239,7 @@ const menuData = {
 	],
 	coldAppetizers: [
 		{
+			id: 'coldAppetizer1',
 			nameUk: 'Закарпатські помазанки',
 			price: 137,
 			weight: '180 г',
@@ -227,6 +250,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Закарпатські помазанки</text></svg>",
 		},
 		{
+			id: 'coldAppetizer2',
 			nameUk: 'Тарілка до горілки',
 			price: 235,
 			weight: '250 г',
@@ -237,6 +261,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Тарілка до горілки</text></svg>",
 		},
 		{
+			id: 'coldAppetizer3',
 			nameUk: 'Сирне плато',
 			price: 258,
 			weight: '180 г',
@@ -249,6 +274,7 @@ const menuData = {
 	],
 	beerSnacks: [
 		{
+			id: 'beerSnack1',
 			nameUk: 'Грінки з часником',
 			price: 65,
 			weight: '100 г',
@@ -259,6 +285,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Грінки з часником</text></svg>",
 		},
 		{
+			id: 'beerSnack2',
 			nameUk: 'Цибулеві кільця',
 			price: 105,
 			weight: '100 г',
@@ -269,6 +296,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Цибулеві кільця</text></svg>",
 		},
 		{
+			id: 'beerSnack3',
 			nameUk: 'Курячі нагетси',
 			price: 135,
 			weight: '100 г',
@@ -279,6 +307,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Курячі нагетси</text></svg>",
 		},
 		{
+			id: 'beerSnack4',
 			nameUk: 'Сир “косичка”',
 			price: 70,
 			weight: '100 г',
@@ -289,6 +318,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сир косичка</text></svg>",
 		},
 		{
+			id: 'beerSnack5',
 			nameUk: 'Чіпси з лавашу',
 			price: 65,
 			weight: '100 г',
@@ -299,6 +329,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Чіпси з лавашу</text></svg>",
 		},
 		{
+			id: 'beerSnack6',
 			nameUk: 'Снек-тарілка',
 			price: 295,
 			weight: '400 г',
@@ -309,6 +340,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Снек-тарілка</text></svg>",
 		},
 		{
+			id: 'beerSnack7',
 			nameUk: 'Пивна тарілка',
 			price: 190,
 			weight: '250 г',
@@ -320,6 +352,7 @@ const menuData = {
 	],
 	firstCourses: [
 		{
+			id: 'firstCourse1',
 			nameUk: 'Бограч “а-ля Катерина”',
 			price: 149,
 			weight: '350 г',
@@ -330,6 +363,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Бограч</text></svg>",
 		},
 		{
+			id: 'firstCourse2',
 			nameUk: 'Традиційний український борщик',
 			price: 118,
 			weight: '350 г',
@@ -340,6 +374,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Борщ</text></svg>",
 		},
 		{
+			id: 'firstCourse3',
 			nameUk: 'Куряча поливка з локшиною',
 			price: 94,
 			weight: '350 г',
@@ -350,18 +385,19 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Бульйон курячий</text></svg>",
 		},
 		{
+			id: 'firstCourse4',
 			nameUk: 'Крем-суп з двох видів грибів',
 			price: 138,
 			weight: '350 г',
 			time: '12 хв',
 			description:
 				'Ніжний крем-суп із білих грибів та шампіньйонів на основі вершків і курячого бульйону, з обсмаженою цибулею, грінками та оливковою олією, прикрашений свіжою зеленню.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крем-суп з грибів</text></svg>",
+			image: 'images/firstCourses/creamMushroomSoup.webp',
 		},
 	],
 	salads: [
 		{
+			id: 'salad1',
 			nameUk: 'Капустяний салат',
 			price: 87,
 			weight: '150 г',
@@ -372,6 +408,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Капустяний салат</text></svg>",
 		},
 		{
+			id: 'salad2',
 			nameUk: 'Грецький салат з фетою',
 			price: 185,
 			weight: '300 г',
@@ -382,6 +419,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Грецький салат з фетою</text></svg>",
 		},
 		{
+			id: 'salad3',
 			nameUk: 'Шопський з бринзою',
 			price: 189,
 			weight: '300 г',
@@ -392,6 +430,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Шопський з бринзою</text></svg>",
 		},
 		{
+			id: 'salad4',
 			nameUk: 'Салат “Карпатський”',
 			price: 230,
 			weight: '300 г',
@@ -402,6 +441,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салат “Карпатський”</text></svg>",
 		},
 		{
+			id: 'salad5',
 			nameUk: 'Салат “Цезар” класичний',
 			price: 215,
 			weight: '350 г',
@@ -412,6 +452,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салат “Цезар” класичний</text></svg>",
 		},
 		{
+			id: 'salad6',
 			nameUk: 'Салат “Цезар” з лососем',
 			price: 245,
 			weight: '350 г',
@@ -422,6 +463,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салат “Цезар” з лососем</text></svg>",
 		},
 		{
+			id: 'salad7',
 			nameUk: 'Теплий салат з курячою печінкою',
 			price: 195,
 			weight: '300 г',
@@ -434,6 +476,7 @@ const menuData = {
 	],
 	sides: [
 		{
+			id: 'side1',
 			nameUk: 'Крумплі по-домашньому',
 			price: 95,
 			weight: '200 г',
@@ -444,6 +487,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крумплі по-домашньому</text></svg>",
 		},
 		{
+			id: 'side2',
 			nameUk: 'Крумплі пюре',
 			price: 95,
 			weight: '200 г',
@@ -453,6 +497,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крумплі пюре</text></svg>",
 		},
 		{
+			id: 'side3',
 			nameUk: 'Картопля фрі',
 			price: 95,
 			weight: '200 г',
@@ -462,6 +507,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Картопля фрі</text></svg>",
 		},
 		{
+			id: 'side4',
 			nameUk: 'Рис з овочами',
 			price: 87,
 			weight: '200 г',
@@ -471,6 +517,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Рис з овочами</text></svg>",
 		},
 		{
+			id: 'side5',
 			nameUk: 'Каша гречана',
 			price: 87,
 			weight: '200 г',
@@ -482,6 +529,7 @@ const menuData = {
 	],
 	hotAppetizers: [
 		{
+			id: 'hotAppetizers1',
 			nameUk: 'Закарпатська цмунда',
 			price: 235,
 			weight: '300 г',
@@ -492,6 +540,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Закарпатська цмунда</text></svg>",
 		},
 		{
+			id: 'hotAppetizers2',
 			nameUk: 'Банош з шкварками та бринзою',
 			price: 147,
 			weight: '300 г',
@@ -502,6 +551,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Банош з шкварками та бринзою</text></svg>",
 		},
 		{
+			id: 'hotAppetizers3',
 			nameUk: 'Банош з грибами та бринзою',
 			price: 165,
 			weight: '300 г',
@@ -512,6 +562,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Банош з грибами та бринзою</text></svg>",
 		},
 		{
+			id: 'hotAppetizers4',
 			nameUk: 'Пельмені домашні',
 			price: 117,
 			weight: '200 г',
@@ -521,6 +572,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Пельмені домашні</text></svg>",
 		},
 		{
+			id: 'hotAppetizers5',
 			nameUk: 'Сковорідка "Мисливська"',
 			price: 245,
 			weight: '300 г',
@@ -531,6 +583,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сковорідка “Мисливська”</text></svg>",
 		},
 		{
+			id: 'hotAppetizers6',
 			nameUk: 'Сковорідка "Куряча"',
 			price: 205,
 			weight: '300 г',
@@ -541,6 +594,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сковорідка “Куряча”</text></svg>",
 		},
 		{
+			id: 'hotAppetizers7',
 			nameUk: 'Деруни з сметаною',
 			price: 155,
 			weight: '200 г',
@@ -550,6 +604,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Деруни з сметаною</text></svg>",
 		},
 		{
+			id: 'hotAppetizers8',
 			nameUk: 'Деруни з грибами в глечику',
 			price: 185,
 			weight: '250 г',
@@ -560,6 +615,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Деруни з грибами в глечику</text></svg>",
 		},
 		{
+			id: 'hotAppetizers9',
 			nameUk: 'Вареники з картоплею',
 			price: 97,
 			weight: '200 г',
@@ -569,6 +625,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Вареники з картоплею</text></svg>",
 		},
 		{
+			id: 'hotAppetizers10',
 			nameUk: 'Вареники з вишнею',
 			price: 107,
 			weight: '200 г',
@@ -581,6 +638,7 @@ const menuData = {
 	],
 	sauces: [
 		{
+			id: 'sauce1',
 			nameUk: 'BBQ',
 			price: 20,
 			weight: '30 г',
@@ -591,6 +649,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>BBQ</text></svg>",
 		},
 		{
+			id: 'sauce2',
 			nameUk: 'Часниковий',
 			price: 20,
 			weight: '30 г',
@@ -601,6 +660,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Часниковий</text></svg>",
 		},
 		{
+			id: 'sauce3',
 			nameUk: 'Кетчуп',
 			price: 20,
 			weight: '30 г',
@@ -613,6 +673,7 @@ const menuData = {
 	],
 	grillDishes: [
 		{
+			id: 'grillDish1',
 			nameUk: 'Шашлик зі свинини',
 			price: 137,
 			weight: '100 г',
@@ -622,6 +683,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Шашлик зі свинини</text></svg>",
 		},
 		{
+			id: 'grillDish2',
 			nameUk: 'Міні-шашлички з курячого філе',
 			price: 117,
 			weight: '100 г',
@@ -631,6 +693,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Міні-шашлички з курячого філе</text></svg>",
 		},
 		{
+			id: 'grillDish3',
 			nameUk: 'Стейк зі свинини',
 			price: 145,
 			weight: '100 г',
@@ -640,6 +703,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Стейк зі свинини</text></svg>",
 		},
 		{
+			id: 'grillDish4',
 			nameUk: 'Ребра свинні',
 			price: 125,
 			weight: '100 г',
@@ -649,6 +713,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Ребра свинні</text></svg>",
 		},
 		{
+			id: 'grillDish5',
 			nameUk: 'Ковбаски купати',
 			price: 127,
 			weight: '100 г',
@@ -658,6 +723,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Ковбаски купати</text></svg>",
 		},
 		{
+			id: 'grillDish6',
 			nameUk: 'Крумплі печені',
 			price: 109,
 			weight: '200 г',
@@ -667,6 +733,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крумплі печені</text></svg>",
 		},
 		{
+			id: 'grillDish7',
 			nameUk: 'Овочі-гриль',
 			price: 195,
 			weight: '250 г',
@@ -677,6 +744,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Овочі-гриль</text></svg>",
 		},
 		{
+			id: 'grillDish8',
 			nameUk: "М'ясний колорит",
 			price: 675,
 			weight: '500 г',
@@ -689,6 +757,7 @@ const menuData = {
 	],
 	mainDishes: [
 		{
+			id: 'mainDish1',
 			nameUk: 'М’ясо “по-закарпатськи”',
 			price: 255,
 			weight: '180 г + 150 г гарніру',
@@ -699,6 +768,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>М’ясо “по-закарпатськи”</text></svg>",
 		},
 		{
+			id: 'mainDish2',
 			nameUk: 'Лечо овочеве',
 			price: 175,
 			weight: '180 г + 150 г гарніру',
@@ -709,6 +779,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Лечо овочеве</text></svg>",
 		},
 		{
+			id: 'mainDish3',
 			nameUk: 'Домашня куряча відбивна',
 			price: 215,
 			weight: '100 г + 150 г гарніру',
@@ -719,6 +790,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Домашня куряча відбивна</text></svg>",
 		},
 		{
+			id: 'mainDish4',
 			nameUk: 'Лоці печене',
 			price: 215,
 			weight: '180 г + 150 г гарніру',
@@ -731,6 +803,7 @@ const menuData = {
 	],
 	lavashGrill: [
 		{
+			id: 'lavashGrill1',
 			nameUk: 'Доліталася',
 			price: 187,
 			weight: '335 г',
@@ -741,6 +814,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Доліталася</text></svg>",
 		},
 		{
+			id: 'lavashGrill2',
 			nameUk: 'Еко',
 			price: 178,
 			weight: '265 г',
@@ -751,6 +825,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Еко</text></svg>",
 		},
 		{
+			id: 'lavashGrill3',
 			nameUk: 'Дуже сирний',
 			price: 175,
 			weight: '430 г',
@@ -761,6 +836,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Дуже сирний</text></svg>",
 		},
 		{
+			id: 'lavashGrill4',
 			nameUk: 'Мисливський',
 			price: 205,
 			weight: '495 г',
@@ -773,6 +849,7 @@ const menuData = {
 	],
 	pizzas: [
 		{
+			id: 'pizza1',
 			nameUk: 'Маргарита',
 			price: 197,
 			weight: '400 г',
@@ -783,6 +860,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Маргарита</text></svg>",
 		},
 		{
+			id: 'pizza2',
 			nameUk: 'Салямі',
 			price: 217,
 			weight: '400 г',
@@ -793,6 +871,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салямі</text></svg>",
 		},
 		{
+			id: 'pizza3',
 			nameUk: 'Чотири сири',
 			price: 237,
 			weight: '400 г',
@@ -803,6 +882,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Чотири сири</text></svg>",
 		},
 		{
+			id: 'pizza4',
 			nameUk: 'Гавайська',
 			price: 235,
 			weight: '400 г',
@@ -813,6 +893,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Гавайська</text></svg>",
 		},
 		{
+			id: 'pizza5',
 			nameUk: 'Цезар',
 			price: 245,
 			weight: '400 г',
@@ -823,6 +904,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Цезар</text></svg>",
 		},
 		{
+			id: 'pizza6',
 			nameUk: 'Мисливська',
 			price: 255,
 			weight: '400 г',
@@ -835,26 +917,27 @@ const menuData = {
 	],
 	desserts: [
 		{
+			id: 'dessert1',
 			nameUk: 'Бабчині палачінти',
 			price: 98,
 			weight: '270 г',
 			time: '15 хв',
 			description:
 				'Тонкі домашні млинці, які можна замовити з сиром або джемом. Склад: млинцеве тісто, сир, цукор, ваніль, або фруктовий джем на вибір. Подаються зі сметаною або вершками.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Бабчині палачінти</text></svg>",
+			image: 'images/desserts/palacinky.webp',
 		},
 		{
+			id: 'dessert2',
 			nameUk: 'Сирники з сметаною або джемом',
 			price: 115,
 			weight: '250 г',
 			time: '15 хв',
 			description:
 				'Ніжні домашні сирники (4 шт) з подачею сметани та джему, доповнені скибочками апельсина або яблука. Склад: сир, яйце, цукор, борошно, ваніль.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сирники</text></svg>",
+			image: 'images/desserts/syrnyky.webp',
 		},
 		{
+			id: 'dessert3',
 			nameUk: 'Яблучний штрудель з горіхами, родзинками та пломбіром',
 			price: 138,
 			weight: '220 г',
@@ -865,6 +948,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Яблучний штрудель</text></svg>",
 		},
 		{
+			id: 'dessert4',
 			nameUk: 'Закарпатські гомбовці',
 			price: 105,
 			weight: '300 г',
@@ -875,6 +959,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Закарпатські гомбовці</text></svg>",
 		},
 		{
+			id: 'dessert5',
 			nameUk: 'Морозиво біле класичне',
 			price: 75,
 			weight: '100 г',
@@ -885,6 +970,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Морозиво біле класичне</text></svg>",
 		},
 		{
+			id: 'dessert6',
 			nameUk: 'Тирамісу',
 			price: 95,
 			weight: '150 г',
@@ -897,6 +983,7 @@ const menuData = {
 	],
 	vodka: [
 		{
+			id: 'vodka1',
 			nameUk: 'Горілка Nemiroff',
 			price: 60,
 			weight: '50 мл',
@@ -906,6 +993,7 @@ const menuData = {
 			image: 'images/vodka/nemiroff.webp',
 		},
 		{
+			id: 'vodka2',
 			nameUk: 'Горілка Finlandia',
 			price: 80,
 			weight: '50 мл',
@@ -915,6 +1003,7 @@ const menuData = {
 			image: 'images/vodka/finlandia.webp',
 		},
 		{
+			id: 'vodka3',
 			nameUk: 'Наливки',
 			price: 50,
 			weight: '50 мл',
@@ -927,6 +1016,7 @@ const menuData = {
 
 	variousVodka: [
 		{
+			id: 'variousVodka1',
 			nameUk: 'Коньяк Закарпатський',
 			price: 65,
 			weight: '50 мл',
@@ -935,6 +1025,7 @@ const menuData = {
 			image: 'images/variousVodka/konyak-zakarpat.webp',
 		},
 		{
+			id: 'variousVodka2',
 			nameUk: 'Becherovka',
 			price: 105,
 			weight: '50 мл',
@@ -944,6 +1035,7 @@ const menuData = {
 			image: 'images/variousVodka/becherovka.webp',
 		},
 		{
+			id: 'variousVodka3',
 			nameUk: 'Jagermeister',
 			price: 117,
 			weight: '50 мл',
@@ -953,6 +1045,7 @@ const menuData = {
 			image: 'images/variousVodka/jagermeister.webp',
 		},
 		{
+			id: 'variousVodka4',
 			nameUk: 'Jameson',
 			price: 149,
 			weight: '50 мл',
@@ -965,6 +1058,7 @@ const menuData = {
 
 	wine: [
 		{
+			id: 'wine1',
 			nameUk: 'Вино Chizay',
 			price: 45,
 			weight: '50 мл',
@@ -974,6 +1068,7 @@ const menuData = {
 			image: 'images/wine/vino-chizay.webp',
 		},
 		{
+			id: 'wine2',
 			nameUk: 'Вино Домашнє',
 			price: 30,
 			weight: '50 мл',
@@ -983,6 +1078,7 @@ const menuData = {
 			image: 'images/wine/vino-domashne.webp',
 		},
 		{
+			id: 'wine3',
 			nameUk: 'Просекко (розливне)',
 			price: 50,
 			weight: '50 мл',
@@ -992,6 +1088,7 @@ const menuData = {
 			image: 'images/wine/prosecco.webp',
 		},
 		{
+			id: 'wine4',
 			nameUk: 'Глінтвейн',
 			price: 80,
 			weight: '200 мл',
@@ -1001,6 +1098,7 @@ const menuData = {
 			image: 'images/wine/hliytvein.webp',
 		},
 		{
+			id: 'wine5',
 			nameUk: 'Вино Закарпатське (пляшка)',
 			price: 540,
 			weight: '700 мл',
@@ -1010,6 +1108,7 @@ const menuData = {
 			image: 'images/wine/vino-chizay.webp',
 		},
 		{
+			id: 'wine6',
 			nameUk: 'Вино Marengo (пляшка)',
 			price: 440,
 			weight: '700 мл',
@@ -1020,6 +1119,7 @@ const menuData = {
 	],
 	beer: [
 		{
+			id: 'beer1',
 			nameUk: 'Пиво розливне світле Krusovice',
 			price: 75,
 			weight: '330 мл',
@@ -1028,6 +1128,7 @@ const menuData = {
 			image: 'images/beer/pivo-krusovice.webp',
 		},
 		{
+			id: 'beer2',
 			nameUk: 'Пиво розливне світле Krusovice',
 			price: 85,
 			weight: '500 мл',
@@ -1037,6 +1138,7 @@ const menuData = {
 			image: 'images/beer/pivo-krusovice.webp',
 		},
 		{
+			id: 'beer3',
 			nameUk: 'Пиво ж/б світле Закарпатське',
 			price: 65,
 			weight: '500 мл',
@@ -1045,6 +1147,7 @@ const menuData = {
 			image: 'images/beer/pivo-zakarpat.webp',
 		},
 		{
+			id: 'beer4',
 			nameUk: 'Пиво ж/б Імпортне',
 			price: 85,
 			weight: '500 мл',
@@ -1053,6 +1156,7 @@ const menuData = {
 			image: 'images/beer/pivo-import.webp',
 		},
 		{
+			id: 'beer5',
 			nameUk: 'Пиво безалкогольне',
 			price: 80,
 			weight: '500 мл',
@@ -1064,6 +1168,7 @@ const menuData = {
 	],
 	coldDrinks: [
 		{
+			id: 'coldDrink1',
 			nameUk: 'Компот з сезонних фруктів',
 			price: 35,
 			weight: '200 мл',
@@ -1073,6 +1178,7 @@ const menuData = {
 			image: 'images/coldDrinks/kompot.webp',
 		},
 		{
+			id: 'coldDrink2',
 			nameUk: 'Pepsi',
 			price: 50,
 			weight: '500 мл',
@@ -1082,6 +1188,7 @@ const menuData = {
 			image: 'images/coldDrinks/pepsi.webp',
 		},
 		{
+			id: 'coldDrink3',
 			nameUk: 'Mirinda',
 			price: 50,
 			weight: '500 мл',
@@ -1091,6 +1198,7 @@ const menuData = {
 			image: 'images/coldDrinks/mirinda.webp',
 		},
 		{
+			id: 'coldDrink4',
 			nameUk: '7-Up',
 			price: 50,
 			weight: '500 мл',
@@ -1100,6 +1208,7 @@ const menuData = {
 			image: 'images/coldDrinks/7-up.webp',
 		},
 		{
+			id: 'coldDrink5',
 			nameUk: 'Поляна квасова',
 			price: 50,
 			weight: '500 мл',
@@ -1109,6 +1218,7 @@ const menuData = {
 			image: 'images/coldDrinks/polyana-kvasova.webp',
 		},
 		{
+			id: 'coldDrink6',
 			nameUk: 'Вода негазована',
 			price: 40,
 			weight: '500 мл',
@@ -1118,6 +1228,7 @@ const menuData = {
 			image: 'images/coldDrinks/voda-negaz.webp',
 		},
 		{
+			id: 'coldDrink7',
 			nameUk: 'Сік',
 			price: 40,
 			weight: '200 мл',
@@ -1127,6 +1238,7 @@ const menuData = {
 			image: 'images/coldDrinks/sic.webp',
 		},
 		{
+			id: 'coldDrink8',
 			nameUk: 'Лимонад',
 			price: 85,
 			weight: '350 мл',
@@ -1136,6 +1248,7 @@ const menuData = {
 			image: 'images/coldDrinks/lymonad.webp',
 		},
 		{
+			id: 'coldDrink9',
 			nameUk: 'Мохіто безалкогольне',
 			price: 105,
 			weight: '350 мл',
@@ -1145,6 +1258,7 @@ const menuData = {
 			image: 'images/coldDrinks/lymonad-mokhito.webp',
 		},
 		{
+			id: 'coldDrink10',
 			nameUk: 'Мохіто алкогольне',
 			price: 125,
 			weight: '350 мл',
@@ -1154,6 +1268,7 @@ const menuData = {
 			image: 'images/coldDrinks/lymonad-mokhito.webp',
 		},
 		// {
+		//  id: 'coldDrink11',
 		// 	nameUk: 'Еспресо тонік',
 		// 	price: 90,
 		// 	weight: '350 мл',
@@ -1163,6 +1278,7 @@ const menuData = {
 		// 	image: 'images/coldDrinks/espreso-tonyk.webp',
 		// },
 		// {
+		//  id: 'coldDrink12',
 		// 	nameUk: 'Шмель',
 		// 	price: 90,
 		// 	weight: '350 мл',
@@ -1174,6 +1290,7 @@ const menuData = {
 	],
 	hotDrinks: [
 		{
+			id: 'hotDrink1',
 			nameUk: 'Еспресо',
 			price: 40,
 			weight: '30 мл',
@@ -1183,6 +1300,7 @@ const menuData = {
 			image: 'images/hotDrinks/espreso.webp',
 		},
 		{
+			id: 'hotDrink2',
 			nameUk: 'Еспресо з молоком',
 			price: 40,
 			weight: '80 мл',
@@ -1192,6 +1310,7 @@ const menuData = {
 			image: 'images/hotDrinks/espreso-z-molokom.webp',
 		},
 		{
+			id: 'hotDrink3',
 			nameUk: 'Американо',
 			price: 45,
 			weight: '60 мл',
@@ -1201,6 +1320,7 @@ const menuData = {
 			image: 'images/hotDrinks/americano.webp',
 		},
 		{
+			id: 'hotDrink4',
 			nameUk: 'Американо з молоком',
 			price: 50,
 			weight: '110 мл',
@@ -1210,6 +1330,7 @@ const menuData = {
 			image: 'images/hotDrinks/americano_moloko.webp',
 		},
 		{
+			id: 'hotDrink5',
 			nameUk: 'Капучино',
 			price: 55,
 			weight: '250 мл',
@@ -1219,6 +1340,7 @@ const menuData = {
 			image: 'images/hotDrinks/kapychino.webp',
 		},
 		{
+			id: 'hotDrink6',
 			nameUk: 'Лате',
 			price: 65,
 			weight: '250 мл',
@@ -1228,6 +1350,7 @@ const menuData = {
 			image: 'images/hotDrinks/late.webp',
 		},
 		{
+			id: 'hotDrink7',
 			nameUk: 'Айс-Лате',
 			price: 95,
 			weight: '250 мл',
@@ -1237,6 +1360,7 @@ const menuData = {
 			image: 'images/hotDrinks/ajs-late.webp',
 		},
 		{
+			id: 'hotDrink8',
 			nameUk: 'Какао',
 			price: 75,
 			weight: '250 мл',
@@ -1246,6 +1370,7 @@ const menuData = {
 			image: 'images/hotDrinks/kakao.webp',
 		},
 		{
+			id: 'hotDrink9',
 			nameUk: 'Чай в заварнику',
 			price: 75,
 			weight: '500 мл',
@@ -1255,6 +1380,7 @@ const menuData = {
 			image: 'images/hotDrinks/chai-v-zavarnuc.webp',
 		},
 		{
+			id: 'hotDrink10',
 			nameUk: 'Чай в асортименті',
 			price: 45,
 			weight: '250 мл',
@@ -1264,6 +1390,7 @@ const menuData = {
 			image: 'images/hotDrinks/chai-v-asor.webp',
 		},
 		{
+			id: 'hotDrink11',
 			nameUk: 'Чай крафтовий',
 			price: 55,
 			weight: '250 мл',
@@ -1275,6 +1402,7 @@ const menuData = {
 	],
 	extras: [
 		{
+			id: 'extra1',
 			nameUk: 'Мед порційний',
 			price: 20,
 			weight: '20 г',
@@ -1283,6 +1411,7 @@ const menuData = {
 			image: 'images/extras/med.webp',
 		},
 		{
+			id: 'extra2',
 			nameUk: 'Вершки порційні',
 			price: 10,
 			weight: '20 г',
@@ -1291,6 +1420,7 @@ const menuData = {
 			image: 'images/extras/verchku.webp',
 		},
 		{
+			id: 'extra3',
 			nameUk: 'Молоко',
 			price: 10,
 			weight: '20 г',
@@ -1299,6 +1429,7 @@ const menuData = {
 			image: 'images/extras/moloko.webp',
 		},
 		{
+			id: 'extra4',
 			nameUk: 'Лимон',
 			price: 10,
 			weight: '20 г',
@@ -1307,6 +1438,7 @@ const menuData = {
 			image: 'images/extras/lumon.webp',
 		},
 		{
+			id: 'extra5',
 			nameUk: 'Шоколад',
 			price: 10,
 			weight: '20 г',
@@ -1315,6 +1447,7 @@ const menuData = {
 			image: 'images/extras/surop.webp',
 		},
 		{
+			id: 'extra6',
 			nameUk: 'Карамель',
 			price: 10,
 			weight: '20 г',
@@ -1323,6 +1456,7 @@ const menuData = {
 			image: 'images/extras/caramel.webp',
 		},
 		{
+			id: 'extra7',
 			nameUk: 'Вишня',
 			price: 10,
 			weight: '20 г',
@@ -1331,6 +1465,7 @@ const menuData = {
 			image: 'images/extras/cherry.webp',
 		},
 		{
+			id: 'extra8',
 			nameUk: 'Малина',
 			price: 10,
 			weight: '20 г',
@@ -1340,3 +1475,4 @@ const menuData = {
 		},
 	],
 }
+module.exports = menuData

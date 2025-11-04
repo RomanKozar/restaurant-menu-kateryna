@@ -15,6 +15,13 @@
 
 		<div class="container" id="menuContainer">
 			<!-- Секції меню будуть додаватися динамічно через JS -->
+			<!-- Додайте попередній лоадер, поки завантажується меню -->
+			<p
+				id="loading-message"
+				style="text-align: center; margin-top: 50px; font-size: 1.2em"
+			>
+				Завантаження меню...
+			</p>
 		</div>
 
 		<!-- Dish Modal -->
@@ -68,8 +75,30 @@
 			</div>
 		</div>
 
-		<script src="menuData.min.js" defer></script>
-		<script src="script.min.js" defer></script>
+		<!-- Firebase SDKs -->
+		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+		<!-- Firebase Initialization -->
+		<script>
+			// Ваш Firebase configuration (скопіюйте з Firebase Console -> Project settings -> Your apps -> Web app)
+			const firebaseConfig = {
+				apiKey: 'AIzaSyDzPZIiMyshj3kuKEZZacKkv_p2kUszvDc',
+				authDomain: 'restaurant-menu-kateryna.firebaseapp.com',
+				projectId: 'restaurant-menu-kateryna',
+				storageBucket: 'restaurant-menu-kateryna.firebasestorage.app',
+				messagingSenderId: '520157411003',
+				appId: '1:520157411003:web:63d4a2a0389dbf7d951b9e',
+				measurementId: 'G-BT35LPFRM3',
+			}
+
+			// Initialize Firebase
+			const app = firebase.initializeApp(firebaseConfig)
+			const db = app.firestore() // Ініціалізуємо Firestore для використання в script.js
+		</script>
+
+		<!-- Ваш власний скрипт, який буде використовувати Firebase - ТЕПЕР ПІСЛЯ ІНІЦІАЛІЗАЦІЇ -->
+		<script src="script.js" defer></script>
+
 		<!-- Vercel Analytics -->
 		<script defer src="/_vercel/insights/script.js"></script>
 	</body>

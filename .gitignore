@@ -1,0 +1,11 @@
+# .gitignore
+
+# Firebase Service Account Key (original file)
+/serviceAccountKey.json
+
+# Environment variables file (contains sensitive info)
+.env
+
+# Other common ignore patterns
+/node_modules
+.DS_Store
