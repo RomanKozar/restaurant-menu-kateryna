@@ -1,3 +1,5 @@
+// Оптимізована версія script.js
+// terser script.js -o script.min.js -c -m
 const menuSections = {
 	troutFishing: 'ЛОВЛЯ ФОРЕЛІ',
 	breakfast: 'СНІДАНКИ',
@@ -7,7 +9,7 @@ const menuSections = {
 	firstCourses: 'ПЕРШІ СТРАВИ',
 	salads: 'САЛАТИ',
 	sides: 'ГАРНІРИ',
-	hotAppetizers: 'ГАРЯЧІ ЗАКУСКИ ',
+	hotAppetizers: 'ГАРЯЧІ ЗАКУСКИ',
 	sauces: 'СОУСИ ДО СТРАВ',
 	grillDishes: 'СТРАВИ НА МАНГАЛІ',
 	mainDishes: 'ОСНОВНІ СТРАВИ',
@@ -23,89 +25,73 @@ const menuSections = {
 	extras: 'ДОДАТКИ',
 }
 
+// Примітки для секцій (винесено окремо для зменшення дублювання)
+const sectionNotes = {
+	breakfast: [
+		'Сніданки доступні до 12:00',
+		'До будь-якого сніданку входить чай, кава або компот на вибір',
+	],
+	lavashGrill: [
+		'До кожного лавашу подається картопля фрі та соус на вибір (кетчуп, BBQ або часниковий).',
+	],
+	mainDishes: [
+		'При замовленні основної страви обирай будь-який гарнір безкоштовно',
+	],
+	grillDishes: ['Мінімальне замовлення – 200 грам.'],
+	troutFishing: [
+		'Ви можете самостійно зловити свіжу форель у нашому ставку та обрати - приготувати її в ресторані або забрати почищеною з собою. Форель не підлягає відпуску. Ціна вказана за 100 грамів живої ваги риби.',
+	],
+}
+
 let currentDish = null
 let quantity = 1
 
+// Оптимізована функція створення елементів
+function createElement(tag, className, content) {
+	const el = document.createElement(tag)
+	if (className) el.className = className
+	if (content) el.textContent = content
+	return el
+}
+
 function renderMenuSections() {
 	const container = document.getElementById('menuContainer')
-	for (const key in menuSections) {
-		const sectionDiv = document.createElement('div')
-		sectionDiv.className = 'menu-section'
+	const fragment = document.createDocumentFragment() // Оптимізація DOM
 
-		const sectionHeader = document.createElement('div')
-		sectionHeader.className = 'section-header'
+	for (const key in menuSections) {
+		const sectionDiv = createElement('div', 'menu-section')
+		const sectionHeader = createElement('div', 'section-header')
 		sectionHeader.onclick = () => toggleSection(key)
 
-		const sectionTitle = document.createElement('h2')
-		sectionTitle.className = 'section-title'
-		sectionTitle.textContent = menuSections[key]
+		const sectionTitle = createElement('h2', 'section-title', menuSections[key])
+		const toggleIcon = createElement('span', 'toggle-icon', '▼')
 
-		const toggleIcon = document.createElement('span')
-		toggleIcon.className = 'toggle-icon'
-		toggleIcon.textContent = '▼'
+		sectionHeader.append(sectionTitle, toggleIcon)
 
-		sectionHeader.appendChild(sectionTitle)
-		sectionHeader.appendChild(toggleIcon)
-
-		const sectionContent = document.createElement('div')
-		sectionContent.className = 'section-content'
+		const sectionContent = createElement('div', 'section-content')
 		sectionContent.id = key + '-content'
 
-		const grid = document.createElement('div')
-		grid.className = 'menu-grid'
+		// Додавання приміток (якщо є)
+		if (sectionNotes[key]) {
+			sectionNotes[key].forEach((note, i) => {
+				const noteEl = createElement(
+					'p',
+					i === 0 ? 'breakfast-note' : 'breakfast-note-secondary',
+					note
+				)
+				sectionContent.appendChild(noteEl)
+			})
+		}
+
+		const grid = createElement('div', 'menu-grid')
 		grid.id = key + '-grid'
 
-		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ СНІДАНКІВ
-		if (key === 'breakfast') {
-			const breakfastNote1 = document.createElement('p')
-			breakfastNote1.className = 'breakfast-note'
-			breakfastNote1.textContent = 'Сніданки доступні до 12:00'
-
-			const breakfastNote2 = document.createElement('p')
-			breakfastNote2.className = 'breakfast-note-secondary'
-			breakfastNote2.textContent =
-				'До будь-якого сніданку входить чай, кава або компот на вибір'
-
-			sectionContent.appendChild(breakfastNote1)
-			sectionContent.appendChild(breakfastNote2)
-		}
-		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ ЛАВАШІВ-ГРИЛЬ
-		if (key === 'lavashGrill') {
-			const lavashGrillNote = document.createElement('p')
-			lavashGrillNote.className = 'breakfast-note'
-			lavashGrillNote.textContent =
-				'До кожного лавашу подається картопля фрі та соус на вибір (кетчуп, BBQ або часниковий).'
-			sectionContent.appendChild(lavashGrillNote)
-		}
-		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ ОСНОВНИХ СТРАВ
-		if (key === 'mainDishes') {
-			const mainDishesNote = document.createElement('p')
-			mainDishesNote.className = 'breakfast-note'
-			mainDishesNote.textContent =
-				'При замовленні основної страви обирай будь-який гарнір безкоштовно'
-			sectionContent.appendChild(mainDishesNote)
-		}
-		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ СТРАВ НА МАНГАЛІ
-		if (key === 'grillDishes') {
-			const grillDishesNote = document.createElement('p')
-			grillDishesNote.className = 'breakfast-note'
-			grillDishesNote.textContent = 'Мінімальне замовлення – 200 грам.'
-			sectionContent.appendChild(grillDishesNote)
-		}
-		// 🟡 ДОДАЄМО ПРИМІТКУ ТІЛЬКИ ДЛЯ ЛОВЛІ ФОРЕЛІ
-		if (key === 'troutFishing') {
-			const troutFishingNote = document.createElement('p')
-			troutFishingNote.className = 'breakfast-note'
-			troutFishingNote.textContent =
-				'Ви можете самостійно зловити свіжу форель у нашому ставку та обрати - приготувати її в ресторані або забрати почищеною з собою. Форель не підлягає відпуску. Ціна вказана за 100 грамів живої ваги риби.'
-			sectionContent.appendChild(troutFishingNote)
-		}
-
 		sectionContent.appendChild(grid)
-		sectionDiv.appendChild(sectionHeader)
-		sectionDiv.appendChild(sectionContent)
-		container.appendChild(sectionDiv)
+		sectionDiv.append(sectionHeader, sectionContent)
+		fragment.appendChild(sectionDiv)
 	}
+
+	container.appendChild(fragment)
 }
 
 function renderMenu() {
@@ -117,38 +103,53 @@ function renderMenu() {
 function renderSection(section, gridId) {
 	const grid = document.getElementById(gridId)
 	if (!grid) return
+
 	const items = menuData[section]
+	const fragment = document.createDocumentFragment() // Оптимізація DOM
 
 	items.forEach((dish, index) => {
-		const item = document.createElement('div')
-		item.className = 'menu-item'
+		const item = createElement('div', 'menu-item')
 		item.onclick = () => openModal(section, index)
 
-		item.innerHTML = `
-            <img src="${dish.image}" alt="${dish.nameUk || dish.name}">
-            <div class="item-info">
-                <div class="item-name">
-                    ${dish.nameUk || dish.name}
-                    ${dish.isNew ? '<span class="new-badge">New</span>' : ''}
-                </div>
-                ${
-									dish.weight
-										? `<div class="item-weight">${dish.weight}</div>`
-										: ''
-								}
-            </div>
-            <div class="item-price">₴ ${dish.price.toFixed(2)}</div>
-        `
+		// Використовуємо template strings тільки там, де потрібно
+		const img = createElement('img')
+		img.src = dish.image
+		img.alt = dish.nameUk || dish.name
+		img.loading = 'lazy' // ⭐ ВАЖЛИВО: Lazy loading для зображень
 
-		grid.appendChild(item)
+		const itemInfo = createElement('div', 'item-info')
+
+		const itemName = createElement('div', 'item-name')
+		itemName.textContent = dish.nameUk || dish.name
+		if (dish.isNew) {
+			const badge = createElement('span', 'new-badge', 'New')
+			itemName.appendChild(badge)
+		}
+
+		itemInfo.appendChild(itemName)
+
+		if (dish.weight) {
+			const weight = createElement('div', 'item-weight', dish.weight)
+			itemInfo.appendChild(weight)
+		}
+
+		const itemPrice = createElement(
+			'div',
+			'item-price',
+			`₴ ${dish.price.toFixed(2)}`
+		)
+
+		item.append(img, itemInfo, itemPrice)
+		fragment.appendChild(item)
 	})
+
+	grid.appendChild(fragment)
 }
 
 function toggleSection(sectionId) {
 	const content = document.getElementById(sectionId + '-content')
 	if (!content) return
 
-	// ⭐ ЗНАХОДИМО ІКОНКУ В HEADER
 	const header = content.previousElementSibling
 	const icon = header.querySelector('.toggle-icon')
 
@@ -167,6 +168,7 @@ function openModal(section, index) {
 	currentDish = menuData[section][index]
 	quantity = 1
 
+	const modal = document.getElementById('dishModal')
 	document.getElementById('modalImage').src = currentDish.image
 	document.getElementById('modalTitle').textContent =
 		currentDish.nameUk || currentDish.name
@@ -177,7 +179,7 @@ function openModal(section, index) {
 	document.getElementById('quantity').textContent = quantity
 	updatePrice()
 
-	document.getElementById('dishModal').classList.add('active')
+	modal.classList.add('active')
 }
 
 function closeModal() {
@@ -207,21 +209,26 @@ function decreaseQuantity() {
 }
 
 function updatePrice() {
-	const total = (currentDish.price * quantity).toFixed(2)
-	document.getElementById('modalPrice').textContent = total
+	document.getElementById('modalPrice').textContent = (
+		currentDish.price * quantity
+	).toFixed(2)
 }
 
-// ⭐ ОДИН ЄДИНИЙ ВХІД
+// Делегування подій для модалок (оптимізація)
 document.addEventListener('DOMContentLoaded', () => {
 	renderMenuSections()
 	renderMenu()
 
-	// Event listeners для модалок
-	document.getElementById('dishModal').addEventListener('click', function (e) {
-		if (e.target === this) closeModal()
-	})
+	// Використовуємо делегування подій
+	const dishModal = document.getElementById('dishModal')
+	const infoModal = document.getElementById('infoModal')
 
-	document.getElementById('infoModal').addEventListener('click', function (e) {
-		if (e.target === this) closeInfoModal()
-	})
+	dishModal.addEventListener(
+		'click',
+		e => e.target === dishModal && closeModal()
+	)
+	infoModal.addEventListener(
+		'click',
+		e => e.target === infoModal && closeInfoModal()
+	)
 })
