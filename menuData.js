@@ -178,8 +178,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Ніжне філе форелі, приправлене ароматними спеціями, сіллю та свіжомеленим перцем. Простота, що розкриває природний смак риби.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель зі спеціями</text></svg>",
+			image: 'images/troutDishes/forel-z-speziya.jpg',
 		},
 		{
 			id: 'troutDish5',
@@ -189,8 +188,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Соковита форель із маринованою цибулею, зеленню та спеціями. Ароматна й ніжна страва для справжніх гурманів.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель з цибулею</text></svg>",
+			image: 'images/troutDishes/forel-z-zibylya.jpg',
 		},
 		{
 			id: 'troutDish6',
@@ -200,8 +198,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Апетитна форель, запечена з овочевим жульєном із перцю, цибулі, кабачка, моркви та баклажану. Смачно й корисно.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель з овочами</text></svg>",
+			image: 'images/troutDishes/forel-z-ovochi.jpg',
 		},
 		{
 			id: 'troutDish7',
@@ -211,8 +208,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Ніжне філе форелі під вершковим соусом із білих грибів і шампіньйонів. Вишукане поєднання смаку та аромату.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Форель з грибами</text></svg>",
+			image: 'images/troutDishes/forel-z-gribami.jpg',
 		},
 		{
 			id: 'troutDish8',
@@ -246,8 +242,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Три види традиційних закарпатських намазок по 50 г кожна: з сала, зі шкварками та сирна з творогом, паприкою і спеціями. Подаються з хрусткими грінками.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Закарпатські помазанки</text></svg>",
+			image: '/images/coldAppetizers/zakarpanski-pomazanki.webp',
 		},
 		{
 			id: 'coldAppetizer2',
@@ -257,8 +252,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Апетитна тарілка з трьох видів сала, подається з гірчицею, свіжою цибулею, часником та зеленню.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Тарілка до горілки</text></svg>",
+			image: '/images/coldAppetizers/tarilka-do-gorilku.webp',
 		},
 		{
 			id: 'coldAppetizer3',
@@ -268,8 +262,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Асорті сирів: моцарелла, фета та твердий сир, подається з медом, свіжим яблуком і міксом горіхів.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сирне плато</text></svg>",
+			image: '/images/coldAppetizers/sirne-plato.webp',
 		},
 	],
 	beerSnacks: [
@@ -281,8 +274,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Хрусткі грінки з ароматом часнику, обсмажені до золотистої скоринки.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Грінки з часником</text></svg>",
+			image: '/images/beerSnacks/grinki-z-chasnikom.webp',
 		},
 		{
 			id: 'beerSnack2',
@@ -303,8 +295,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Ніжні шматочки курячого філе в золотистій паніровці, ідеальні з соусом BBQ або часниковим.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Курячі нагетси</text></svg>",
+			image: '/images/beerSnacks/kyryachi-nagetsu.webp',
 		},
 		{
 			id: 'beerSnack4',
@@ -314,8 +305,7 @@ const menuData = {
 			time: '10 хв',
 			description:
 				'Сирна косичка з ніжним смаком, подається з соусом за вибором.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сир косичка</text></svg>",
+			image: '/images/beerSnacks/sir-kosichka.webp',
 		},
 		{
 			id: 'beerSnack5',
@@ -325,8 +315,7 @@ const menuData = {
 			time: '8 хв',
 			description:
 				'Хрусткі домашні чипси з лавашу з ароматними спеціями, ідеальні до пива або соусу.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Чіпси з лавашу</text></svg>",
+			image: '/images/beerSnacks/chipsi-z-lavachu.webp',
 		},
 		{
 			id: 'beerSnack6',
@@ -336,8 +325,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'Асорті: курячі нагетси, сир фрі, цибулеві кільця, картопля фрі',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Снек-тарілка</text></svg>",
+			image: '/images/beerSnacks/snek-tarilka.webp',
 		},
 		{
 			id: 'beerSnack7',
@@ -346,8 +334,7 @@ const menuData = {
 			weight: '250 г',
 			time: '15 хв',
 			description: 'Закуски до пива: чипси з лавашу, сир косичка, горішки',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Пивна тарілка</text></svg>",
+			image: '/images/beerSnacks/pivna-tarilka.webp',
 		},
 	],
 	firstCourses: [
@@ -359,8 +346,7 @@ const menuData = {
 			time: '12 хв',
 			description:
 				'Ароматний угорський гуляш зі свинини з картоплею, морквою, болгарським перцем, томатами та спеціями, доповнений баварською сосискою та свинячим салом, прикрашений свіжим кропом і петрушкою.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Бограч</text></svg>",
+			image: '/images/firstCourses/bograh.webp',
 		},
 		{
 			id: 'firstCourse2',
@@ -370,8 +356,7 @@ const menuData = {
 			time: '12 хв',
 			description:
 				'Насичений український борщ із картоплею, капустою, морквою, буряком та цибулею, з відварною корейкою, подається зі сметаною та свіжою зеленню.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Борщ</text></svg>",
+			image: '/images/firstCourses/borh.webp',
 		},
 		{
 			id: 'firstCourse3',
@@ -381,8 +366,7 @@ const menuData = {
 			time: '12 хв',
 			description:
 				'Легкий та ароматний курячий бульйон із локшиною, морквою та свіжою зеленню кропу і петрушки, приправлений меленим перцем.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Бульйон курячий</text></svg>",
+			image: '/images/firstCourses/kyracha-polivka.webp',
 		},
 		{
 			id: 'firstCourse4',
@@ -404,8 +388,7 @@ const menuData = {
 			time: '12 хв',
 			description:
 				'Свіжа капуста та хрустка морква, заправлені ароматною олією, сіллю та меленим перцем.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Капустяний салат</text></svg>",
+			image: '/images/salads/kapystani.webp',
 		},
 		{
 			id: 'salad2',
@@ -415,8 +398,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Соковиті томати, свіжі огірки та болгарський перець, мікс салатів, оливки, ніжна фета та оливкова олія - справжній смак Греції.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Грецький салат з фетою</text></svg>",
+			image: '/images/salads/hrezkiu.webp',
 		},
 		{
 			id: 'salad3',
@@ -448,8 +430,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Світлий мікс салатів, соковитий курячий стейк, грінки, сир пармезан та ніжний соус бальзамік – класика, яка завжди смакує.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салат “Цезар” класичний</text></svg>",
+			image: '/images/salads/zezar.webp',
 		},
 		{
 			id: 'salad6',
@@ -483,8 +464,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Смажена картопля на сковороді з цибулею, часником, спеціями та шкварками.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крумплі по-домашньому</text></svg>",
+			image: '/images/sides/kartoplya-po-domachomy.webp',
 		},
 		{
 			id: 'side2',
@@ -493,8 +473,7 @@ const menuData = {
 			weight: '200 г',
 			time: '25 хв',
 			description: 'Картопляне пюре з маслом.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крумплі пюре</text></svg>",
+			image: '/images/sides/pyre.webp',
 		},
 		{
 			id: 'side3',
@@ -503,8 +482,7 @@ const menuData = {
 			weight: '200 г',
 			time: '25 хв',
 			description: 'Хрустка картопля фрі.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Картопля фрі</text></svg>",
+			image: '/images/sides/kartoplya-fri.webp',
 		},
 		{
 			id: 'side4',
@@ -523,8 +501,7 @@ const menuData = {
 			weight: '200 г',
 			time: '25 хв',
 			description: 'Гречана крупа з маслом.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Каша гречана</text></svg>",
+			image: '/images/sides/grechka.webp',
 		},
 	],
 	hotAppetizers: [
@@ -536,8 +513,7 @@ const menuData = {
 			time: '30 хв',
 			description:
 				'Картопляна маса з яйцем, борошном та спеціями; начинка: білі гриби і курячий стейк; вершковий соус, зелень (кріп, петрушка).',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Закарпатська цмунда</text></svg>",
+			image: '/images/hotAppetizers/zakarpanzka-zmynda.webp',
 		},
 		{
 			id: 'hotAppetizers2',
@@ -563,27 +539,16 @@ const menuData = {
 		},
 		{
 			id: 'hotAppetizers4',
-			nameUk: 'Пельмені домашні',
-			price: 117,
-			weight: '200 г',
-			time: '25 хв',
-			description: 'Домашні пельмені, порція 15 штук.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Пельмені домашні</text></svg>",
-		},
-		{
-			id: 'hotAppetizers5',
 			nameUk: 'Сковорідка "Мисливська"',
 			price: 245,
 			weight: '300 г',
 			time: '35 хв',
 			description:
 				'Картопля, перець, цибуля, морква, свинна корейка, мисливська ковбаска, томатний соус, BBQ, голландський сир, зелень.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сковорідка “Мисливська”</text></svg>",
+			image: '/images/hotAppetizers/skovoridka-muslivsca.webp',
 		},
 		{
-			id: 'hotAppetizers6',
+			id: 'hotAppetizers5',
 			nameUk: 'Сковорідка "Куряча"',
 			price: 205,
 			weight: '300 г',
@@ -594,7 +559,7 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сковорідка “Куряча”</text></svg>",
 		},
 		{
-			id: 'hotAppetizers7',
+			id: 'hotAppetizers6',
 			nameUk: 'Деруни з сметаною',
 			price: 155,
 			weight: '200 г',
@@ -604,15 +569,24 @@ const menuData = {
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Деруни з сметаною</text></svg>",
 		},
 		{
-			id: 'hotAppetizers8',
+			id: 'hotAppetizers7',
 			nameUk: 'Деруни з грибами в глечику',
 			price: 185,
 			weight: '250 г',
 			time: '30 хв',
 			description:
 				'5 середніх дерунів із картопляної маси, яйця, борошно, сіль, перець, часник, цибуля; подаються з білими грибами, голландським сиром і вершковим соусом.',
+			image: '/images/hotAppetizers/derynu-z-hribami.webp',
+		},
+		{
+			id: 'hotAppetizers8',
+			nameUk: 'Пельмені домашні',
+			price: 117,
+			weight: '200 г',
+			time: '25 хв',
+			description: 'Домашні пельмені, порція 15 штук.',
 			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Деруни з грибами в глечику</text></svg>",
+				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Пельмені домашні</text></svg>",
 		},
 		{
 			id: 'hotAppetizers9',
@@ -645,8 +619,7 @@ const menuData = {
 			time: '1 хв',
 			description:
 				'Ароматний соус BBQ, ідеально підкреслює смак м’яса та страв на мангалі.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>BBQ</text></svg>",
+			image: '/images/sauces/BBQ.webp',
 		},
 		{
 			id: 'sauce2',
@@ -656,8 +629,7 @@ const menuData = {
 			time: '1 хв',
 			description:
 				'Ніжний часниковий соус, який додає стравам пікантності та аромату.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Часниковий</text></svg>",
+			image: '/images/sauces/chasnikovuy.webp',
 		},
 		{
 			id: 'sauce3',
@@ -667,8 +639,7 @@ const menuData = {
 			time: '1 хв',
 			description:
 				'Класичний томатний кетчуп для доповнення будь-яких страв на мангалі.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A52A2A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Кетчуп</text></svg>",
+			image: '/images/sauces/ketzhup.webp',
 		},
 	],
 	grillDishes: [
@@ -679,8 +650,7 @@ const menuData = {
 			weight: '100 г',
 			time: '45 хв',
 			description: 'Соковитий свинний ошийок у маринаді зі спеціями.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Шашлик зі свинини</text></svg>",
+			image: '/images/grillDishes/schahlik-z-svininu.webp',
 		},
 		{
 			id: 'grillDish2',
@@ -699,8 +669,7 @@ const menuData = {
 			weight: '100 г',
 			time: '45 хв',
 			description: 'Свинний ошийок у маринаді зі спеціями, подається з маслом.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Стейк зі свинини</text></svg>",
+			image: '/images/grillDishes/steu-z-svininu.webp',
 		},
 		{
 			id: 'grillDish4',
@@ -729,8 +698,7 @@ const menuData = {
 			weight: '200 г',
 			time: '35 хв',
 			description: 'Запечена картопля з шкварками, бринзою та сіллю.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Крумплі печені</text></svg>",
+			image: '/images/grillDishes/krympli-pechini.webp',
 		},
 		{
 			id: 'grillDish7',
@@ -740,8 +708,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Мариновані кабачки, баклажани, перець, цибуля та шампіньйони з соєвим соусом і спеціями.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Овочі-гриль</text></svg>",
+			image: '/images/grillDishes/ovochi-gril.webp',
 		},
 		{
 			id: 'grillDish8',
@@ -810,8 +777,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'Склад: лаваш, курячий стейк, помідор, сир моцарела, твердий сир, соус “Цезар”. Ніжний та ситний лаваш із куркою та сирами.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Доліталася</text></svg>",
+			image: '/images/lavashGrill/dolitali.webp',
 		},
 		{
 			id: 'lavashGrill2',
@@ -821,8 +787,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'Склад: лаваш, твердий сир, моцарела, мікс грибів (білі гриби, шампіньйони), цибуля, зелень (кріп, петрушка), соус “Цезар”. Ароматний вегетаріанський лаваш із грибами.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Еко</text></svg>",
+			image: '/images/lavashGrill/eko.webp',
 		},
 		{
 			id: 'lavashGrill3',
@@ -832,8 +797,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'Склад: лаваш, сир голландський, моцарела, бринза, соус “Цезар”. Справжня насолода для поціновувачів сиру.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Дуже сирний</text></svg>",
+			image: '/images/lavashGrill/dyhe-surni.webp',
 		},
 		{
 			id: 'lavashGrill4',
@@ -843,8 +807,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'Склад: лаваш, мисливська ковбаска, курячий стейк, помідор, болгарський перець, цибуля, твердий сир, моцарела, соус “Цезар”. Пікантний ситний лаваш із м’ясом та сиром.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23DEB887' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Мисливський</text></svg>",
+			image: '/images/lavashGrill/mislivski.webp',
 		},
 	],
 	pizzas: [
@@ -856,8 +819,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Класична італійська піца на тонкому тісті з ароматним томатним соусом, соковитими помідорами та свіжим базиліком. Склад: томатний соус, сир моцарела, сир голландський, помідори, базилік.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Маргарита</text></svg>",
+			image: '/images/pizzas/margarita.webp',
 		},
 		{
 			id: 'pizza2',
@@ -867,8 +829,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Піца з пікантною салямі, поєднанням двох видів сиру та ніжним томатним соусом. Склад: томатний соус, сир моцарела, сир голландський, салямі.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салямі</text></svg>",
+			image: '/images/pizzas/salyami.webp',
 		},
 		{
 			id: 'pizza3',
@@ -878,8 +839,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Ніжна вершкова піца з насиченим сирним смаком. Ідеальний вибір для поціновувачів сиру. Склад: вершковий соус, сир моцарела, сир голландський, сир пармезан, сир з блакитною пліснявою.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Чотири сири</text></svg>",
+			image: '/images/pizzas/choturu-suri.webp',
 		},
 		{
 			id: 'pizza4',
@@ -889,8 +849,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Соковита піца з ніжним курячим філе, ананасами та кукурудзою, що створює ідеальний баланс солодкого та солоного смаку. Склад: томатний соус, сир моцарела, сир голландський, куряче філе, ананас, кукурудза.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Гавайська</text></svg>",
+			image: '/images/pizzas/havaiski.webp',
 		},
 		{
 			id: 'pizza5',
@@ -900,8 +859,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Оригінальна піца на основі популярного салату. Склад: томатний соус, сир моцарела, салат мікс, куряче філе, сир пармезан, помідори чері, соус "Цезар".',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Цезар</text></svg>",
+			image: '/images/pizzas/zezar-piza.webp',
 		},
 		{
 			id: 'pizza6',
@@ -911,8 +869,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Піца з насиченим м’ясним смаком. Склад: томатний соус, сир моцарела, сир голландський, шинка, мисливські ковбаски, купати.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Мисливська</text></svg>",
+			image: '/images/pizzas/mislivska-piza.webp',
 		},
 	],
 	desserts: [
@@ -966,8 +923,7 @@ const menuData = {
 			time: '10 хв',
 			description:
 				'Класичний білий пломбір із топінгом на вибір: шоколад, вишня або карамель.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Морозиво біле класичне</text></svg>",
+			image: '/images/desserts/morozivo-bile.webp',
 		},
 		{
 			id: 'dessert6',
@@ -1013,7 +969,6 @@ const menuData = {
 			image: 'images/vodka/nalivki.webp',
 		},
 	],
-
 	variousVodka: [
 		{
 			id: 'variousVodka1',
@@ -1055,7 +1010,6 @@ const menuData = {
 			image: 'images/variousVodka/jameson.webp',
 		},
 	],
-
 	wine: [
 		{
 			id: 'wine1',

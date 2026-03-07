@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 	<head>
 		<meta charset="UTF-8" />
@@ -57,10 +57,10 @@
 				<div class="info-item">
 					<strong>📞 Телефони:</strong>
 					<a href="tel:+380993377557">+380 99 337 75 57</a>
-					<br /><a href="tel:+380673460556">+380 67 346 05 56</a> <br />
-						href="tel:+380980337755"
-						>+380 98 033 77 55</a
-					>
+					<br />
+					<a href="tel:+380673460556">+380 67 346 05 56</a>
+					<br />
+					<a href="tel:+380980337755">+380 98 033 77 55</a>
 				</div>
 				<div class="info-item">
 					<strong>📍 Адреса:</strong>
@@ -76,7 +76,7 @@
 		<!-- Firebase SDKs -->
 		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-		
+
 		<!-- Firebase Initialization -->
 		<script>
 			const firebaseConfig = {
@@ -92,7 +92,7 @@
 			// Initialize Firebase
 			const app = firebase.initializeApp(firebaseConfig)
 			const db = app.firestore()
-			
+
 			// ⭐ ДОДАЙТЕ ЦЕ - перевірка готовності
 			console.log('Firebase ініціалізовано, db готовий:', !!db)
 		</script>

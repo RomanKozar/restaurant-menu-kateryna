@@ -4,6 +4,6 @@
     "dotenv": "^17.2.3",
     "firebase": "^12.5.0",
     "firebase-admin": "^13.5.0",
-    "sharp": "^0.34.4"
+    "sharp": "^0.34.5"
   }
 }
