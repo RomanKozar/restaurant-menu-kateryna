@@ -97,7 +97,7 @@ async function uploadImagesAndLinkToFirestore() {
 			const publicUrl = `https://storage.googleapis.com/${GCLOUD_STORAGE_BUCKET_NAME}/${storagePath}`
 
 			// Ключ мапи - це шлях, який ми очікуємо в Firestore (images/category/file.webp)
-			imageUrlMap.set(`images/${storagePath}`, publicUrl)
+			imageUrlMap.set(`/images/${storagePath}`, publicUrl)
 			processedCount++
 		} catch (error) {
 			console.error(`!!! Помилка для ${storagePath}:`, error.message)

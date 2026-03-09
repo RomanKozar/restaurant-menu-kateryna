@@ -8,7 +8,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'Ви можете самостійно виловити свіжу форель у нашому ставку — це справжнє задоволення для любителів активного відпочинку. Риба відразу потрапляє на кухню для подальшого приготування або очищення за вашим бажанням.',
-			image: 'images/troutFishing/troutFishing.webp',
+			image: '/images/troutFishing/troutFishing.webp',
 		},
 		{
 			id: 'troutFishing2',
@@ -18,7 +18,7 @@ const menuData = {
 			time: '10 хв',
 			description:
 				'Наші кухарі професійно очистять виловлену вами форель, щоб ви могли забрати її з собою. Ідеально для тих, хто цінує зручність і чистоту.',
-			image: 'images/troutFishing/сleaningTrout.webp',
+			image: '/images/troutFishing/сleaningTrout.webp',
 		},
 		{
 			id: 'troutFishing3',
@@ -28,7 +28,7 @@ const menuData = {
 			time: '40 хв',
 			description:
 				'Соковита форель, приготована зі спеціями для риби, меленим перцем та сіллю. Просте, але вишукане поєднання, яке підкреслює природний смак свіжої риби.',
-			image: 'images/troutFishing/troutWithSpices.webp',
+			image: '/images/troutFishing/troutWithSpices.webp',
 		},
 		{
 			id: 'troutFishing4',
@@ -38,7 +38,7 @@ const menuData = {
 			time: '40 хв',
 			description:
 				'Ніжна форель у поєднанні з овочевим жульєном із болгарського перцю, цибулі, кабачка, моркви та баклажану. Страва насичена ароматами літа й чудово смакує як основна.',
-			image: 'images/troutFishing/troutWithVegetables.webp',
+			image: '/images/troutFishing/troutWithVegetables.webp',
 		},
 		{
 			id: 'troutFishing5',
@@ -48,7 +48,7 @@ const menuData = {
 			time: '40 хв',
 			description:
 				'Форель, запечена з маринованою цибулею, зеленню, сіллю та перцем. Страва має приємну пікантність і насичений аромат, який чудово доповнює ніжне м’ясо риби.',
-			image: 'images/troutFishing/troutWithOnion.webp',
+			image: '/images/troutFishing/troutWithOnion.webp',
 		},
 		{
 			id: 'troutFishing6',
@@ -58,7 +58,7 @@ const menuData = {
 			time: '40 хв',
 			description:
 				'Делікатна форель із двома видами грибів — білими та шампіньйонами, тушкованими у вершковому соусі з легкою ноткою солі. Вишуканий смак для справжніх гурманів.',
-			image: 'images/troutFishing/troutWithMushrooms.webp',
+			image: '/images/troutFishing/troutWithMushrooms.webp',
 		},
 	],
 	breakfast: [
@@ -69,7 +69,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Яєшня з сосискою, сиром та овочами',
-			image: 'images/breakfast/breakfast1.webp',
+			image: '/images/breakfast/breakfast1.webp',
 		},
 		{
 			id: 'breakfast2',
@@ -78,7 +78,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Відварені яйця, тости з маслом, сиром, ковбасою та овочами',
-			image: 'images/breakfast/breakfast2.webp',
+			image: '/images/breakfast/breakfast2.webp',
 		},
 		{
 			id: 'breakfast3',
@@ -87,7 +87,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Домашні сирники зі сметаною та джемом',
-			image: 'images/breakfast/breakfast3.webp',
+			image: '/images/breakfast/breakfast3.webp',
 		},
 		{
 			id: 'breakfast4',
@@ -96,7 +96,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Смачні творожні гомбовці зі сметаною та шоколадом',
-			image: 'images/breakfast/breakfast4.webp',
+			image: '/images/breakfast/breakfast4.webp',
 		},
 		{
 			id: 'breakfast5',
@@ -105,7 +105,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Яєшня бовтунка з шинкою, сиром та овочами',
-			image: 'images/breakfast/breakfast5.webp',
+			image: '/images/breakfast/breakfast5.webp',
 		},
 		{
 			id: 'breakfast6',
@@ -114,7 +114,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Омлет з сосискою, сиром та овочами',
-			image: 'images/breakfast/breakfast6.webp',
+			image: '/images/breakfast/breakfast6.webp',
 		},
 		{
 			id: 'breakfast7',
@@ -124,7 +124,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Смачна каша на вибір: рисова, гречана, вівсяна, з родзинками та фруктами',
-			image: 'images/breakfast/breakfast7.webp',
+			image: '/images/breakfast/breakfast7.webp',
 		},
 		{
 			id: 'breakfast8',
@@ -133,7 +133,7 @@ const menuData = {
 			weight: '400 г',
 			time: '15 хв',
 			description: 'Млинці з домашнім сиром або млинці з джемом',
-			image: 'images/breakfast/breakfast8.webp',
+			image: '/images/breakfast/breakfast8.webp',
 		},
 	],
 	troutDishes: [
@@ -156,8 +156,7 @@ const menuData = {
 			time: '20 хв',
 			description:
 				'На порцію подається 11 вареників з ніжною начинкою з форелі, зелені та спецій. Подаються з вершковим маслом і соусом “Катерина”.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Вареники з начинкою з форелі</text></svg>",
+			image: '/images/troutDishes/vareniki-z-foreli.webp',
 		},
 		{
 			id: 'troutDish3',
@@ -178,7 +177,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Ніжне філе форелі, приправлене ароматними спеціями, сіллю та свіжомеленим перцем. Простота, що розкриває природний смак риби.',
-			image: 'images/troutDishes/forel-z-speziya.jpg',
+			image: '/images/troutDishes/forel-z-speziya.jpg',
 		},
 		{
 			id: 'troutDish5',
@@ -188,7 +187,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Соковита форель із маринованою цибулею, зеленню та спеціями. Ароматна й ніжна страва для справжніх гурманів.',
-			image: 'images/troutDishes/forel-z-zibylya.jpg',
+			image: '/images/troutDishes/forel-z-zibylya.jpg',
 		},
 		{
 			id: 'troutDish6',
@@ -198,7 +197,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Апетитна форель, запечена з овочевим жульєном із перцю, цибулі, кабачка, моркви та баклажану. Смачно й корисно.',
-			image: 'images/troutDishes/forel-z-ovochi.jpg',
+			image: '/images/troutDishes/forel-z-ovochi.jpg',
 		},
 		{
 			id: 'troutDish7',
@@ -208,7 +207,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Ніжне філе форелі під вершковим соусом із білих грибів і шампіньйонів. Вишукане поєднання смаку та аромату.',
-			image: 'images/troutDishes/forel-z-gribami.jpg',
+			image: '/images/troutDishes/forel-z-gribami.jpg',
 		},
 		{
 			id: 'troutDish8',
@@ -229,8 +228,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Ніжне філе форелі у соусі з білого вина, вершкового масла та вершків. Делікатна страва з витонченим ароматом.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Філе у вершково-винному соусі</text></svg>",
+			image: '/images/troutDishes/file-u-verschkax.webp',
 		},
 	],
 	coldAppetizers: [
@@ -284,8 +282,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Соковиті цибульні кільця в хрусткій паніровці, подаються з соусом на вибір.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFA500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Цибулеві кільця</text></svg>",
+			image: '/images/beerSnacks/zibylevi-kilzy.webp',
 		},
 		{
 			id: 'beerSnack3',
@@ -376,7 +373,7 @@ const menuData = {
 			time: '12 хв',
 			description:
 				'Ніжний крем-суп із білих грибів та шампіньйонів на основі вершків і курячого бульйону, з обсмаженою цибулею, грінками та оливковою олією, прикрашений свіжою зеленню.',
-			image: 'images/firstCourses/creamMushroomSoup.webp',
+			image: '/images/firstCourses/creamMushroomSoup.webp',
 		},
 	],
 	salads: [
@@ -419,8 +416,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Апетитне поєднання вареного яйця, курячого стейку, маринованих грибів, цибулі, соусу “Цезар” та твердого сиру з горіховою ноткою.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салат “Карпатський”</text></svg>",
+			image: '/images/salads/karpatskiy.webp',
 		},
 		{
 			id: 'salad5',
@@ -491,8 +487,7 @@ const menuData = {
 			weight: '200 г',
 			time: '20 хв',
 			description: 'Сезонні овочі: кукурудза, горошок, перець, цибуля, морква.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FFD700' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Рис з овочами</text></svg>",
+			image: '/images/sides/ris-z-ovochami.webp',
 		},
 		{
 			id: 'side5',
@@ -523,8 +518,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Кукурудзяна крупа з маслом, сметаною та вершками; подається зі шкварками і бринзою.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Банош з шкварками та бринзою</text></svg>",
+			image: '/images/hotAppetizers/banosch-z-schvarkfmi.webp',
 		},
 		{
 			id: 'hotAppetizers3',
@@ -534,8 +528,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Кукурудзяна крупа з маслом, сметаною та вершками; подається з обсмаженими шампіньйонами і бринзою.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Банош з грибами та бринзою</text></svg>",
+			image: '/images/hotAppetizers/banosch-z-gribami.webp',
 		},
 		{
 			id: 'hotAppetizers4',
@@ -555,8 +548,7 @@ const menuData = {
 			time: '35 хв',
 			description:
 				'Перець, кабачок, цибуля, шампіньйони, вершки, куряче філе, карі, куркума, прованські трави; подається з відварним рисом і маслом.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Сковорідка “Куряча”</text></svg>",
+			image: '/images/hotAppetizers/skovoridka-kyryacha.webp',
 		},
 		{
 			id: 'hotAppetizers6',
@@ -565,8 +557,7 @@ const menuData = {
 			weight: '200 г',
 			time: '30 хв',
 			description: '4 деруни з картопляної маси; подаються зі сметаною.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Деруни з сметаною</text></svg>",
+			image: '/images/hotAppetizers/derynu-z-smetanoy.webp',
 		},
 		{
 			id: 'hotAppetizers7',
@@ -585,8 +576,7 @@ const menuData = {
 			weight: '200 г',
 			time: '25 хв',
 			description: 'Домашні пельмені, порція 15 штук.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Пельмені домашні</text></svg>",
+			image: '/images/hotAppetizers/pelmeni.webp',
 		},
 		{
 			id: 'hotAppetizers9',
@@ -595,8 +585,7 @@ const menuData = {
 			weight: '200 г',
 			time: '25 хв',
 			description: '11 вареників з картоплею та маслом; подаються зі сметаною.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Вареники з картоплею</text></svg>",
+			image: '/images/hotAppetizers/vareniki-z-kartopley.webp',
 		},
 		{
 			id: 'hotAppetizers10',
@@ -606,8 +595,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'11 вареників з вишнею та маслом; подаються з вишневим соусом.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF6347' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Вареники з вишнею</text></svg>",
+			image: '/images/hotAppetizers/vareniki-z-vischney.webp',
 		},
 	],
 	sauces: [
@@ -659,8 +647,7 @@ const menuData = {
 			weight: '100 г',
 			time: '35 хв',
 			description: 'Ніжні курячі шашлички у маринаді, соковиті та ароматні.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Міні-шашлички з курячого філе</text></svg>",
+			image: '/images/grillDishes/mini-chahlik-kyrya.webp',
 		},
 		{
 			id: 'grillDish3',
@@ -688,8 +675,7 @@ const menuData = {
 			weight: '100 г',
 			time: '35 хв',
 			description: 'Соковиті ковбаски купати, 2 шт на 100 г.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Ковбаски купати</text></svg>",
+			image: '/images/grillDishes/kovbaski-kypatu.webp',
 		},
 		{
 			id: 'grillDish6',
@@ -731,8 +717,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Ніжна свинна корейка, тушкована у вершковому грибному соусі з додаванням голландського сиру та ароматних спецій. Справжній закарпатський делікатес.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>М’ясо “по-закарпатськи”</text></svg>",
+			image: '/images/mainDishes/myso-po-zakarpatski.webp',
 		},
 		{
 			id: 'mainDish2',
@@ -742,8 +727,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Соковите лечо зі свіжих томатів, болгарського перцю, кабачка та цибулі, тушковане у вершках і сметані, з ароматною зеленню та спеціями. Легка та корисна страва.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Лечо овочеве</text></svg>",
+			image: '/images/mainDishes/lecho-z-ovochami.webp',
 		},
 		{
 			id: 'mainDish3',
@@ -753,8 +737,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Соковите куряче філе у хрусткій паніровці з сухарів, борошна та яйця, приправлене ароматними спеціями. Класика домашньої кухні.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Домашня куряча відбивна</text></svg>",
+			image: '/images/mainDishes/kyryacha-vidbivna.webp',
 		},
 		{
 			id: 'mainDish4',
@@ -764,8 +747,7 @@ const menuData = {
 			time: '25 хв',
 			description:
 				'Соковита свинна корейка, запечена з цибулею та паприкою, злегка підсмажена на олії. Насичений смак та аромат традиційної страви.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23FF4500' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Лоці печене</text></svg>",
+			image: '/images/mainDishes/lozi-pechene.webp',
 		},
 	],
 	lavashGrill: [
@@ -881,7 +863,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Тонкі домашні млинці, які можна замовити з сиром або джемом. Склад: млинцеве тісто, сир, цукор, ваніль, або фруктовий джем на вибір. Подаються зі сметаною або вершками.',
-			image: 'images/desserts/palacinky.webp',
+			image: '/images/desserts/palacinky.webp',
 		},
 		{
 			id: 'dessert2',
@@ -891,7 +873,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Ніжні домашні сирники (4 шт) з подачею сметани та джему, доповнені скибочками апельсина або яблука. Склад: сир, яйце, цукор, борошно, ваніль.',
-			image: 'images/desserts/syrnyky.webp',
+			image: '/images/desserts/syrnyky.webp',
 		},
 		{
 			id: 'dessert3',
@@ -901,8 +883,7 @@ const menuData = {
 			time: '15 хв',
 			description:
 				'Хрустке листкове тісто з ароматною начинкою з яблук, родзинок, кориці та горіхів. Подається з кулькою пломбіру. Склад: листкове тісто, яблука, родзинки, волоський горіх, кориця, цукор, морозиво.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Яблучний штрудель</text></svg>",
+			image: '/images/desserts/schtrydel.webp',
 		},
 		{
 			id: 'dessert4',
@@ -946,7 +927,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Класична українська горілка з чистим смаком та м’яким післясмаком.',
-			image: 'images/vodka/nemiroff.webp',
+			image: '/images/vodka/nemiroff.webp',
 		},
 		{
 			id: 'vodka2',
@@ -956,7 +937,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Преміальна фінська горілка, що поєднує чистоту льодовикової води та зернову м’якість.',
-			image: 'images/vodka/finlandia.webp',
+			image: '/images/vodka/finlandia.webp',
 		},
 		{
 			id: 'vodka3',
@@ -966,7 +947,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Домашні наливки з вишні, журавлини, полуниці, ожини та горобини.',
-			image: 'images/vodka/nalivki.webp',
+			image: '/images/vodka/nalivki.webp',
 		},
 	],
 	variousVodka: [
@@ -977,7 +958,7 @@ const menuData = {
 			weight: '50 мл',
 			time: '-',
 			description: 'Витриманий коньяк із благородними нотами дубу та ванілі.',
-			image: 'images/variousVodka/konyak-zakarpat.webp',
+			image: '/images/variousVodka/konyak-zakarpat.webp',
 		},
 		{
 			id: 'variousVodka2',
@@ -987,7 +968,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Чеський трав’яний лікер із гармонійним поєднанням спецій і кориці.',
-			image: 'images/variousVodka/becherovka.webp',
+			image: '/images/variousVodka/becherovka.webp',
 		},
 		{
 			id: 'variousVodka3',
@@ -997,7 +978,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Німецький лікер на травах з інтенсивним ароматом і легкою гірчинкою.',
-			image: 'images/variousVodka/jagermeister.webp',
+			image: '/images/variousVodka/jagermeister.webp',
 		},
 		{
 			id: 'variousVodka4',
@@ -1007,7 +988,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Ірландський віскі з нотами карамелі, дубу та ванілі, м’який і збалансований.',
-			image: 'images/variousVodka/jameson.webp',
+			image: '/images/variousVodka/jameson.webp',
 		},
 	],
 	wine: [
@@ -1019,7 +1000,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Вино Chizay (біле, червоне; сухе або напівсолодке) з ароматом закарпатських виноградників.',
-			image: 'images/wine/vino-chizay.webp',
+			image: '/images/wine/vino-chizay.webp',
 		},
 		{
 			id: 'wine2',
@@ -1029,7 +1010,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Домашнє червоне вино (сухе) з насиченим фруктовим смаком і легким післясмаком.',
-			image: 'images/wine/vino-domashne.webp',
+			image: '/images/wine/vino-domashne.webp',
 		},
 		{
 			id: 'wine3',
@@ -1039,7 +1020,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Італійське ігристе вино (сухе) з нотками яблука, груші та цитрусових.',
-			image: 'images/wine/prosecco.webp',
+			image: '/images/wine/prosecco.webp',
 		},
 		{
 			id: 'wine4',
@@ -1049,7 +1030,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Гарячий ароматний напій із вина, спецій, кориці та цитрусових.',
-			image: 'images/wine/hliytvein.webp',
+			image: '/images/wine/hliytvein.webp',
 		},
 		{
 			id: 'wine5',
@@ -1059,7 +1040,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Вино Закарпатське — червоне або біле, сухе чи напівсолодке, з глибоким букетом аромату.',
-			image: 'images/wine/vino-chizay.webp',
+			image: '/images/wine/vino-chizay.webp',
 		},
 		{
 			id: 'wine6',
@@ -1068,7 +1049,7 @@ const menuData = {
 			weight: '700 мл',
 			time: '-',
 			description: 'Ігристе вино Marengo — біле або червоне, легке і святкове.',
-			image: 'images/wine/vino-marengo.webp',
+			image: '/images/wine/vino-marengo.webp',
 		},
 	],
 	beer: [
@@ -1079,7 +1060,7 @@ const menuData = {
 			weight: '330 мл',
 			time: '-',
 			description: 'Насичене світле пиво з приємною гірчинкою та ніжною піною.',
-			image: 'images/beer/pivo-krusovice.webp',
+			image: '/images/beer/pivo-krusovice.webp',
 		},
 		{
 			id: 'beer2',
@@ -1089,7 +1070,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Класичне чеське пиво з м’яким смаком та золотистим кольором.',
-			image: 'images/beer/pivo-krusovice.webp',
+			image: '/images/beer/pivo-krusovice.webp',
 		},
 		{
 			id: 'beer3',
@@ -1098,7 +1079,7 @@ const menuData = {
 			weight: '500 мл',
 			time: '-',
 			description: 'Легке українське пиво з натуральним смаком солоду.',
-			image: 'images/beer/pivo-zakarpat.webp',
+			image: '/images/beer/pivo-zakarpat.webp',
 		},
 		{
 			id: 'beer4',
@@ -1107,7 +1088,7 @@ const menuData = {
 			weight: '500 мл',
 			time: '-',
 			description: 'Преміальне імпортне пиво з яскравим ароматом хмелю.',
-			image: 'images/beer/pivo-import.webp',
+			image: '/images/beer/pivo-import.webp',
 		},
 		{
 			id: 'beer5',
@@ -1117,7 +1098,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Легкий безалкогольний варіант для поціновувачів смаку пива.',
-			image: 'images/beer/pivo-b-a.webp',
+			image: '/images/beer/pivo-b-a.webp',
 		},
 	],
 	coldDrinks: [
@@ -1129,7 +1110,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: сезонні фрукти, цукор, вода. Домашній освіжаючий компот з натуральних фруктів.',
-			image: 'images/coldDrinks/kompot.webp',
+			image: '/images/coldDrinks/kompot.webp',
 		},
 		{
 			id: 'coldDrink2',
@@ -1139,7 +1120,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: вода, цукор, карамель, кофеїн. Класичний смак популярного газованого напою.',
-			image: 'images/coldDrinks/pepsi.webp',
+			image: '/images/coldDrinks/pepsi.webp',
 		},
 		{
 			id: 'coldDrink3',
@@ -1149,7 +1130,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: вода, цукор, апельсиновий сік, ароматизатори. Яскравий цитрусовий смак і бадьорість.',
-			image: 'images/coldDrinks/mirinda.webp',
+			image: '/images/coldDrinks/mirinda.webp',
 		},
 		{
 			id: 'coldDrink4',
@@ -1159,7 +1140,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: вода, цукор, ароматизатор лимона та лайма. Легкий освіжаючий лимонно-лаймовий смак.',
-			image: 'images/coldDrinks/7-up.webp',
+			image: '/images/coldDrinks/7-up.webp',
 		},
 		{
 			id: 'coldDrink5',
@@ -1169,7 +1150,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: мінеральна вода з природних джерел. Має приємний смак і корисні мінерали.',
-			image: 'images/coldDrinks/polyana-kvasova.webp',
+			image: '/images/coldDrinks/polyana-kvasova.webp',
 		},
 		{
 			id: 'coldDrink6',
@@ -1179,7 +1160,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: природна очищена вода. Ідеально підходить для щоденного вживання.',
-			image: 'images/coldDrinks/voda-negaz.webp',
+			image: '/images/coldDrinks/voda-negaz.webp',
 		},
 		{
 			id: 'coldDrink7',
@@ -1189,7 +1170,7 @@ const menuData = {
 			time: '-',
 			description:
 				'Склад: натуральний сік (мультивітамін, апельсин, яблуко). Освіжаючий вітамінний напій.',
-			image: 'images/coldDrinks/sic.webp',
+			image: '/images/coldDrinks/sic.webp',
 		},
 		{
 			id: 'coldDrink8',
@@ -1199,7 +1180,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: лимон, цукор, вода, м’ята. Класичний домашній лимонад з освіжаючим смаком.',
-			image: 'images/coldDrinks/lymonad.webp',
+			image: '/images/coldDrinks/lymonad.webp',
 		},
 		{
 			id: 'coldDrink9',
@@ -1209,7 +1190,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: м’ята, лайм, цукор, спрайт, лід. Освіжаючий коктейль без алкоголю.',
-			image: 'images/coldDrinks/lymonad-mokhito.webp',
+			image: '/images/coldDrinks/lymonad-mokhito.webp',
 		},
 		{
 			id: 'coldDrink10',
@@ -1219,7 +1200,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: ром, м’ята, лайм, цукор, спрайт, лід. Класичний освіжаючий коктейль.',
-			image: 'images/coldDrinks/lymonad-mokhito.webp',
+			image: '/images/coldDrinks/lymonad-mokhito.webp',
 		},
 		// {
 		//  id: 'coldDrink11',
@@ -1229,7 +1210,7 @@ const menuData = {
 		// 	time: '5 хв',
 		// 	description:
 		// 		'Склад: еспресо, тонік, лід. Незвичайне поєднання кавової гірчинки й освіжаючої свіжості.',
-		// 	image: 'images/coldDrinks/espreso-tonyk.webp',
+		// 	image: '/images/coldDrinks/espreso-tonyk.webp',
 		// },
 		// {
 		//  id: 'coldDrink12',
@@ -1239,7 +1220,7 @@ const menuData = {
 		// 	time: '5 хв',
 		// 	description:
 		// 		'Склад: еспресо, апельсиновий сік, лід. Яскравий напій із цитрусовим смаком.',
-		// 	image: 'images/coldDrinks/shmel.webp',
+		// 	image: '/images/coldDrinks/shmel.webp',
 		// },
 	],
 	hotDrinks: [
@@ -1251,7 +1232,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: арабіка, робуста. Насичений класичний смак справжнього еспресо',
-			image: 'images/hotDrinks/espreso.webp',
+			image: '/images/hotDrinks/espreso.webp',
 		},
 		{
 			id: 'hotDrink2',
@@ -1261,7 +1242,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: арабіка, робуста, молоко коров’яче. М’який смак кави з ніжною молочною ноткою',
-			image: 'images/hotDrinks/espreso-z-molokom.webp',
+			image: '/images/hotDrinks/espreso-z-molokom.webp',
 		},
 		{
 			id: 'hotDrink3',
@@ -1271,7 +1252,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: арабіка, робуста, вода. Класичний чорний напій із м’яким післясмаком',
-			image: 'images/hotDrinks/americano.webp',
+			image: '/images/hotDrinks/americano.webp',
 		},
 		{
 			id: 'hotDrink4',
@@ -1281,7 +1262,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: арабіка, робуста, вода, молоко коров’яче. Легкий кавовий смак із вершковими нотами',
-			image: 'images/hotDrinks/americano_moloko.webp',
+			image: '/images/hotDrinks/americano_moloko.webp',
 		},
 		{
 			id: 'hotDrink5',
@@ -1291,7 +1272,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: еспресо, молоко, молочна піна. Гармонійне поєднання кави та кремової текстури',
-			image: 'images/hotDrinks/kapychino.webp',
+			image: '/images/hotDrinks/kapychino.webp',
 		},
 		{
 			id: 'hotDrink6',
@@ -1301,7 +1282,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: еспресо, молоко, молочна піна. Ніжний напій із м’яким кавово-молочним смаком',
-			image: 'images/hotDrinks/late.webp',
+			image: '/images/hotDrinks/late.webp',
 		},
 		{
 			id: 'hotDrink7',
@@ -1311,7 +1292,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: еспресо, молоко, лід, сироп за бажанням. Освіжаючий холодний кавовий напій',
-			image: 'images/hotDrinks/ajs-late.webp',
+			image: '/images/hotDrinks/ajs-late.webp',
 		},
 		{
 			id: 'hotDrink8',
@@ -1321,7 +1302,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: какао-порошок, молоко, цукор. Ніжний солодкий напій для поціновувачів шоколаду',
-			image: 'images/hotDrinks/kakao.webp',
+			image: '/images/hotDrinks/kakao.webp',
 		},
 		{
 			id: 'hotDrink9',
@@ -1331,7 +1312,7 @@ const menuData = {
 			time: '8 хв',
 			description:
 				"Склад: чорний, зелений, фруктовий або трав'яний чай. Подається у заварнику для двох осіб.",
-			image: 'images/hotDrinks/chai-v-zavarnuc.webp',
+			image: '/images/hotDrinks/chai-v-zavarnuc.webp',
 		},
 		{
 			id: 'hotDrink10',
@@ -1341,7 +1322,7 @@ const menuData = {
 			time: '8 хв',
 			description:
 				"Склад: чорний, зелений, фруктовий або трав'яний чай. Ароматний напій для будь-якого настрою.",
-			image: 'images/hotDrinks/chai-v-asor.webp',
+			image: '/images/hotDrinks/chai-v-asor.webp',
 		},
 		{
 			id: 'hotDrink11',
@@ -1351,7 +1332,7 @@ const menuData = {
 			time: '5 хв',
 			description:
 				'Склад: натуральні листки чаю, сушені ягоди та трави. Авторський крафтовий чай ручної роботи.',
-			image: 'images/hotDrinks/kraftovuy.webp',
+			image: '/images/hotDrinks/kraftovuy.webp',
 		},
 	],
 	extras: [
@@ -1362,7 +1343,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: натуральний квітковий мед',
-			image: 'images/extras/med.webp',
+			image: '/images/extras/med.webp',
 		},
 		{
 			id: 'extra2',
@@ -1371,7 +1352,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: вершки пастеризовані коров’ячі',
-			image: 'images/extras/verchku.webp',
+			image: '/images/extras/verchku.webp',
 		},
 		{
 			id: 'extra3',
@@ -1380,7 +1361,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: свіже коров’яче молоко.',
-			image: 'images/extras/moloko.webp',
+			image: '/images/extras/moloko.webp',
 		},
 		{
 			id: 'extra4',
@@ -1389,7 +1370,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: натуральний свіжий лимон',
-			image: 'images/extras/lumon.webp',
+			image: '/images/extras/lumon.webp',
 		},
 		{
 			id: 'extra5',
@@ -1398,7 +1379,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: какао-маса, какао-масло, цукор',
-			image: 'images/extras/surop.webp',
+			image: '/images/extras/surop.webp',
 		},
 		{
 			id: 'extra6',
@@ -1407,7 +1388,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: цукор, вершки, масло, ваніль.',
-			image: 'images/extras/caramel.webp',
+			image: '/images/extras/caramel.webp',
 		},
 		{
 			id: 'extra7',
@@ -1416,7 +1397,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: вишня у власному соку',
-			image: 'images/extras/cherry.webp',
+			image: '/images/extras/cherry.webp',
 		},
 		{
 			id: 'extra8',
@@ -1425,7 +1406,7 @@ const menuData = {
 			weight: '20 г',
 			time: '-',
 			description: 'Склад: свіжа малина або малиновий соус',
-			image: 'images/extras/maluna.webp',
+			image: '/images/extras/maluna.webp',
 		},
 	],
 }
