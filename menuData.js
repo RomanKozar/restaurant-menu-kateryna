@@ -3,7 +3,7 @@ const menuData = {
 		{
 			id: 'troutFishing1',
 			nameUk: 'Вилов форелі самостійно',
-			price: 49,
+			price: 55,
 			weight: '100 г',
 			time: '20 хв',
 			description:
@@ -23,7 +23,7 @@ const menuData = {
 		{
 			id: 'troutFishing3',
 			nameUk: 'Приготування форелі зі спеціями',
-			price: 40,
+			price: 50,
 			weight: '100 г',
 			time: '40 хв',
 			description:
@@ -33,7 +33,7 @@ const menuData = {
 		{
 			id: 'troutFishing4',
 			nameUk: 'Приготування форелі з овочами',
-			price: 45,
+			price: 55,
 			weight: '100 г',
 			time: '40 хв',
 			description:
@@ -43,7 +43,7 @@ const menuData = {
 		{
 			id: 'troutFishing5',
 			nameUk: 'Приготування форелі з цибулею',
-			price: 45,
+			price: 55,
 			weight: '100 г',
 			time: '40 хв',
 			description:
@@ -53,7 +53,7 @@ const menuData = {
 		{
 			id: 'troutFishing6',
 			nameUk: 'Приготування форелі з грибами',
-			price: 50,
+			price: 60,
 			weight: '100 г',
 			time: '40 хв',
 			description:
@@ -140,18 +140,17 @@ const menuData = {
 		{
 			id: 'troutDish1',
 			nameUk: 'Шеф салат “Катерина”',
-			price: 247,
+			price: 277,
 			weight: '350 г',
 			time: '20 хв',
 			description:
 				'Фірмовий салат із міксу свіжих овочів, копченої форелі, яблука та маринованої цибулі під фірмовим соусом “Катерина” з нотками лимона та бальзаміку.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Шеф салат “Катерина”</text></svg>",
+			image: '/images/troutDishes/schef-salat-kateryna.webp',
 		},
 		{
 			id: 'troutDish2',
 			nameUk: 'Вареники з начинкою з форелі',
-			price: 134,
+			price: 154,
 			weight: '200 г',
 			time: '20 хв',
 			description:
@@ -161,18 +160,17 @@ const menuData = {
 		{
 			id: 'troutDish3',
 			nameUk: 'Фунчоза з форелі',
-			price: 275,
+			price: 315,
 			weight: '300 г',
 			time: '30 хв',
 			description:
 				'Рисова локшина з овочами, соєвим та медово-гірчичним соусом, подається з філе форелі у кунжутній паніровці. Страва з яскравим східним смаком.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2300CED1' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Фунчоза з форелі</text></svg>",
+			image: '/images/troutDishes/fynchoza-z-foreli.webp',
 		},
 		{
 			id: 'troutDish4',
 			nameUk: 'Форель зі спеціями',
-			price: 105,
+			price: 110,
 			weight: '100 г',
 			time: '35 хв',
 			description:
@@ -182,7 +180,7 @@ const menuData = {
 		{
 			id: 'troutDish5',
 			nameUk: 'Форель з цибулею',
-			price: 109,
+			price: 119,
 			weight: '100 г',
 			time: '35 хв',
 			description:
@@ -192,7 +190,7 @@ const menuData = {
 		{
 			id: 'troutDish6',
 			nameUk: 'Форель з овочами',
-			price: 118,
+			price: 128,
 			weight: '100 г',
 			time: '35 хв',
 			description:
@@ -202,7 +200,7 @@ const menuData = {
 		{
 			id: 'troutDish7',
 			nameUk: 'Форель з грибами',
-			price: 135,
+			price: 140,
 			weight: '100 г',
 			time: '35 хв',
 			description:
@@ -223,7 +221,7 @@ const menuData = {
 		{
 			id: 'troutDish9',
 			nameUk: 'Філе у вершково-винному соусі',
-			price: 165,
+			price: 175,
 			weight: '100 г',
 			time: '35 хв',
 			description:
@@ -235,7 +233,7 @@ const menuData = {
 		{
 			id: 'coldAppetizer1',
 			nameUk: 'Закарпатські помазанки',
-			price: 137,
+			price: 157,
 			weight: '180 г',
 			time: '15 хв',
 			description:
@@ -245,7 +243,7 @@ const menuData = {
 		{
 			id: 'coldAppetizer2',
 			nameUk: 'Тарілка до горілки',
-			price: 235,
+			price: 265,
 			weight: '250 г',
 			time: '15 хв',
 			description:
@@ -255,7 +253,7 @@ const menuData = {
 		{
 			id: 'coldAppetizer3',
 			nameUk: 'Сирне плато',
-			price: 258,
+			price: 278,
 			weight: '180 г',
 			time: '15 хв',
 			description:
@@ -338,7 +336,7 @@ const menuData = {
 		{
 			id: 'firstCourse1',
 			nameUk: 'Бограч “а-ля Катерина”',
-			price: 149,
+			price: 169,
 			weight: '350 г',
 			time: '12 хв',
 			description:
@@ -348,7 +346,7 @@ const menuData = {
 		{
 			id: 'firstCourse2',
 			nameUk: 'Традиційний український борщик',
-			price: 118,
+			price: 135,
 			weight: '350 г',
 			time: '12 хв',
 			description:
@@ -358,7 +356,7 @@ const menuData = {
 		{
 			id: 'firstCourse3',
 			nameUk: 'Куряча поливка з локшиною',
-			price: 94,
+			price: 104,
 			weight: '350 г',
 			time: '12 хв',
 			description:
@@ -368,7 +366,7 @@ const menuData = {
 		{
 			id: 'firstCourse4',
 			nameUk: 'Крем-суп з двох видів грибів',
-			price: 138,
+			price: 155,
 			weight: '350 г',
 			time: '12 хв',
 			description:
@@ -390,7 +388,7 @@ const menuData = {
 		{
 			id: 'salad2',
 			nameUk: 'Грецький салат з фетою',
-			price: 185,
+			price: 205,
 			weight: '300 г',
 			time: '15 хв',
 			description:
@@ -400,7 +398,7 @@ const menuData = {
 		{
 			id: 'salad3',
 			nameUk: 'Шопський з бринзою',
-			price: 189,
+			price: 209,
 			weight: '300 г',
 			time: '15 хв',
 			description:
@@ -411,7 +409,7 @@ const menuData = {
 		{
 			id: 'salad4',
 			nameUk: 'Салат “Карпатський”',
-			price: 230,
+			price: 265,
 			weight: '300 г',
 			time: '15 хв',
 			description:
@@ -421,7 +419,7 @@ const menuData = {
 		{
 			id: 'salad5',
 			nameUk: 'Салат “Цезар” класичний',
-			price: 215,
+			price: 255,
 			weight: '350 г',
 			time: '15 хв',
 			description:
@@ -431,18 +429,17 @@ const menuData = {
 		{
 			id: 'salad6',
 			nameUk: 'Салат “Цезар” з лососем',
-			price: 245,
+			price: 285,
 			weight: '350 г',
 			time: '15 хв',
 			description:
 				'Мікс салатів з ніжним лососем, грінками, сиром пармезан, яйцем та соусом бальзамік – витончений смак для гурманів.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Салат “Цезар” з лососем</text></svg>",
+			image: '/images/salads/zezar-z-lososem.webp',
 		},
 		{
 			id: 'salad7',
 			nameUk: 'Теплий салат з курячою печінкою',
-			price: 195,
+			price: 225,
 			weight: '300 г',
 			time: '20 хв',
 			description:
@@ -503,7 +500,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers1',
 			nameUk: 'Закарпатська цмунда',
-			price: 235,
+			price: 255,
 			weight: '300 г',
 			time: '30 хв',
 			description:
@@ -513,7 +510,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers2',
 			nameUk: 'Банош з шкварками та бринзою',
-			price: 147,
+			price: 165,
 			weight: '300 г',
 			time: '25 хв',
 			description:
@@ -523,7 +520,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers3',
 			nameUk: 'Банош з грибами та бринзою',
-			price: 165,
+			price: 180,
 			weight: '300 г',
 			time: '25 хв',
 			description:
@@ -533,7 +530,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers4',
 			nameUk: 'Сковорідка "Мисливська"',
-			price: 245,
+			price: 295,
 			weight: '300 г',
 			time: '35 хв',
 			description:
@@ -543,7 +540,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers5',
 			nameUk: 'Сковорідка "Куряча"',
-			price: 205,
+			price: 255,
 			weight: '300 г',
 			time: '35 хв',
 			description:
@@ -553,7 +550,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers6',
 			nameUk: 'Деруни з сметаною',
-			price: 155,
+			price: 165,
 			weight: '200 г',
 			time: '30 хв',
 			description: '4 деруни з картопляної маси; подаються зі сметаною.',
@@ -562,7 +559,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers7',
 			nameUk: 'Деруни з грибами в глечику',
-			price: 185,
+			price: 220,
 			weight: '250 г',
 			time: '30 хв',
 			description:
@@ -572,7 +569,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers8',
 			nameUk: 'Пельмені домашні',
-			price: 117,
+			price: 137,
 			weight: '200 г',
 			time: '25 хв',
 			description: 'Домашні пельмені, порція 15 штук.',
@@ -581,7 +578,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers9',
 			nameUk: 'Вареники з картоплею',
-			price: 97,
+			price: 117,
 			weight: '200 г',
 			time: '25 хв',
 			description: '11 вареників з картоплею та маслом; подаються зі сметаною.',
@@ -590,7 +587,7 @@ const menuData = {
 		{
 			id: 'hotAppetizers10',
 			nameUk: 'Вареники з вишнею',
-			price: 107,
+			price: 127,
 			weight: '200 г',
 			time: '25 хв',
 			description:
@@ -643,7 +640,7 @@ const menuData = {
 		{
 			id: 'grillDish2',
 			nameUk: 'Міні-шашлички з курячого філе',
-			price: 117,
+			price: 128,
 			weight: '100 г',
 			time: '35 хв',
 			description: 'Ніжні курячі шашлички у маринаді, соковиті та ароматні.',
@@ -659,19 +656,9 @@ const menuData = {
 			image: '/images/grillDishes/steu-z-svininu.webp',
 		},
 		{
-			id: 'grillDish4',
-			nameUk: 'Ребра свинні',
-			price: 125,
-			weight: '100 г',
-			time: '45 хв',
-			description: 'Соковиті свинні ребра зі спеціями.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2395462A' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Ребра свинні</text></svg>",
-		},
-		{
 			id: 'grillDish5',
 			nameUk: 'Ковбаски купати',
-			price: 127,
+			price: 137,
 			weight: '100 г',
 			time: '35 хв',
 			description: 'Соковиті ковбаски купати, 2 шт на 100 г.',
@@ -680,7 +667,7 @@ const menuData = {
 		{
 			id: 'grillDish6',
 			nameUk: 'Крумплі печені',
-			price: 109,
+			price: 129,
 			weight: '200 г',
 			time: '35 хв',
 			description: 'Запечена картопля з шкварками, бринзою та сіллю.',
@@ -689,7 +676,7 @@ const menuData = {
 		{
 			id: 'grillDish7',
 			nameUk: 'Овочі-гриль',
-			price: 195,
+			price: 205,
 			weight: '250 г',
 			time: '35 хв',
 			description:
@@ -699,7 +686,7 @@ const menuData = {
 		{
 			id: 'grillDish8',
 			nameUk: "М'ясний колорит",
-			price: 675,
+			price: 695,
 			weight: '500 г',
 			time: '45 хв',
 			description:
@@ -712,7 +699,7 @@ const menuData = {
 		{
 			id: 'mainDish1',
 			nameUk: 'М’ясо “по-закарпатськи”',
-			price: 255,
+			price: 285,
 			weight: '180 г + 150 г гарніру',
 			time: '25 хв',
 			description:
@@ -722,7 +709,7 @@ const menuData = {
 		{
 			id: 'mainDish2',
 			nameUk: 'Лечо овочеве',
-			price: 175,
+			price: 205,
 			weight: '180 г + 150 г гарніру',
 			time: '25 хв',
 			description:
@@ -732,7 +719,7 @@ const menuData = {
 		{
 			id: 'mainDish3',
 			nameUk: 'Домашня куряча відбивна',
-			price: 215,
+			price: 255,
 			weight: '100 г + 150 г гарніру',
 			time: '25 хв',
 			description:
@@ -742,7 +729,7 @@ const menuData = {
 		{
 			id: 'mainDish4',
 			nameUk: 'Лоці печене',
-			price: 215,
+			price: 255,
 			weight: '180 г + 150 г гарніру',
 			time: '25 хв',
 			description:
@@ -754,7 +741,7 @@ const menuData = {
 		{
 			id: 'lavashGrill1',
 			nameUk: 'Доліталася',
-			price: 187,
+			price: 207,
 			weight: '335 г',
 			time: '20 хв',
 			description:
@@ -764,7 +751,7 @@ const menuData = {
 		{
 			id: 'lavashGrill2',
 			nameUk: 'Еко',
-			price: 178,
+			price: 198,
 			weight: '265 г',
 			time: '20 хв',
 			description:
@@ -774,7 +761,7 @@ const menuData = {
 		{
 			id: 'lavashGrill3',
 			nameUk: 'Дуже сирний',
-			price: 175,
+			price: 205,
 			weight: '430 г',
 			time: '20 хв',
 			description:
@@ -784,7 +771,7 @@ const menuData = {
 		{
 			id: 'lavashGrill4',
 			nameUk: 'Мисливський',
-			price: 205,
+			price: 225,
 			weight: '495 г',
 			time: '20 хв',
 			description:
@@ -796,7 +783,7 @@ const menuData = {
 		{
 			id: 'pizza1',
 			nameUk: 'Маргарита',
-			price: 197,
+			price: 217,
 			weight: '400 г',
 			time: '25 хв',
 			description:
@@ -806,7 +793,7 @@ const menuData = {
 		{
 			id: 'pizza2',
 			nameUk: 'Салямі',
-			price: 217,
+			price: 237,
 			weight: '400 г',
 			time: '25 хв',
 			description:
@@ -816,7 +803,7 @@ const menuData = {
 		{
 			id: 'pizza3',
 			nameUk: 'Чотири сири',
-			price: 237,
+			price: 249,
 			weight: '400 г',
 			time: '25 хв',
 			description:
@@ -826,7 +813,7 @@ const menuData = {
 		{
 			id: 'pizza4',
 			nameUk: 'Гавайська',
-			price: 235,
+			price: 249,
 			weight: '400 г',
 			time: '25 хв',
 			description:
@@ -836,7 +823,7 @@ const menuData = {
 		{
 			id: 'pizza5',
 			nameUk: 'Цезар',
-			price: 245,
+			price: 265,
 			weight: '400 г',
 			time: '25 хв',
 			description:
@@ -846,7 +833,7 @@ const menuData = {
 		{
 			id: 'pizza6',
 			nameUk: 'Мисливська',
-			price: 255,
+			price: 275,
 			weight: '400 г',
 			time: '25 хв',
 			description:
@@ -858,7 +845,7 @@ const menuData = {
 		{
 			id: 'dessert1',
 			nameUk: 'Бабчині палачінти',
-			price: 98,
+			price: 118,
 			weight: '270 г',
 			time: '15 хв',
 			description:
@@ -868,7 +855,7 @@ const menuData = {
 		{
 			id: 'dessert2',
 			nameUk: 'Сирники з сметаною або джемом',
-			price: 115,
+			price: 125,
 			weight: '250 г',
 			time: '15 хв',
 			description:
@@ -878,7 +865,7 @@ const menuData = {
 		{
 			id: 'dessert3',
 			nameUk: 'Яблучний штрудель з горіхами, родзинками та пломбіром',
-			price: 138,
+			price: 158,
 			weight: '220 г',
 			time: '15 хв',
 			description:
@@ -888,13 +875,12 @@ const menuData = {
 		{
 			id: 'dessert4',
 			nameUk: 'Закарпатські гомбовці',
-			price: 105,
+			price: 125,
 			weight: '300 г',
 			time: '15 хв',
 			description:
 				'Творожні кульки на пару (7 шт) у солодкій паніровці, подаються на сметанково-шоколадній подушці з топінгом. Склад: сир, манка, яйце, цукор, борошно, паніровка, сметана, шоколадний соус.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Закарпатські гомбовці</text></svg>",
+			image: '/images/desserts/gombovzi.webp',
 		},
 		{
 			id: 'dessert5',
@@ -905,17 +891,6 @@ const menuData = {
 			description:
 				'Класичний білий пломбір із топінгом на вибір: шоколад, вишня або карамель.',
 			image: '/images/desserts/morozivo-bile.webp',
-		},
-		{
-			id: 'dessert6',
-			nameUk: 'Тирамісу',
-			price: 95,
-			weight: '150 г',
-			time: '10 хв',
-			description:
-				'Ніжний італійський десерт на основі маскарпоне, кави та бісквіту савоярді, посипаний какао. Склад: сир маскарпоне, яйце, цукор, бісквіт, кава, какао.',
-			image:
-				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%238B0000' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Тирамісу</text></svg>",
 		},
 	],
 	vodka: [
@@ -948,6 +923,26 @@ const menuData = {
 			description:
 				'Домашні наливки з вишні, журавлини, полуниці, ожини та горобини.',
 			image: '/images/vodka/nalivki.webp',
+		},
+		{
+			id: 'vodka4',
+			nameUk: 'Сет наливок 4 штуки',
+			price: 160,
+			weight: '200 мл',
+			time: '-',
+			description:
+				'Домашні наливки з вишні, журавлини, полуниці, ожини та горобини.',
+			image: '/images/vodka/set-4.webp',
+		},
+		{
+			id: 'vodka5',
+			nameUk: 'Сет наливок 6 штук',
+			price: 240,
+			weight: '300 мл',
+			time: '-',
+			description:
+				'Домашні наливки з вишні, журавлини, полуниці, ожини та горобини.',
+			image: '/images/vodka/set-6.webp',
 		},
 	],
 	variousVodka: [
@@ -1105,7 +1100,7 @@ const menuData = {
 		{
 			id: 'coldDrink1',
 			nameUk: 'Компот з сезонних фруктів',
-			price: 35,
+			price: 40,
 			weight: '200 мл',
 			time: '-',
 			description:
@@ -1115,7 +1110,7 @@ const menuData = {
 		{
 			id: 'coldDrink2',
 			nameUk: 'Pepsi',
-			price: 50,
+			price: 60,
 			weight: '500 мл',
 			time: '-',
 			description:
@@ -1125,7 +1120,7 @@ const menuData = {
 		{
 			id: 'coldDrink3',
 			nameUk: 'Mirinda',
-			price: 50,
+			price: 60,
 			weight: '500 мл',
 			time: '-',
 			description:
@@ -1135,7 +1130,7 @@ const menuData = {
 		{
 			id: 'coldDrink4',
 			nameUk: '7-Up',
-			price: 50,
+			price: 60,
 			weight: '500 мл',
 			time: '-',
 			description:
@@ -1145,7 +1140,7 @@ const menuData = {
 		{
 			id: 'coldDrink5',
 			nameUk: 'Поляна квасова',
-			price: 50,
+			price: 60,
 			weight: '500 мл',
 			time: '-',
 			description:
@@ -1165,7 +1160,7 @@ const menuData = {
 		{
 			id: 'coldDrink7',
 			nameUk: 'Сік',
-			price: 40,
+			price: 45,
 			weight: '200 мл',
 			time: '-',
 			description:
@@ -1175,7 +1170,7 @@ const menuData = {
 		{
 			id: 'coldDrink8',
 			nameUk: 'Лимонад',
-			price: 85,
+			price: 95,
 			weight: '350 мл',
 			time: '5 хв',
 			description:
@@ -1185,7 +1180,7 @@ const menuData = {
 		{
 			id: 'coldDrink9',
 			nameUk: 'Мохіто безалкогольне',
-			price: 105,
+			price: 115,
 			weight: '350 мл',
 			time: '5 хв',
 			description:
@@ -1195,7 +1190,7 @@ const menuData = {
 		{
 			id: 'coldDrink10',
 			nameUk: 'Мохіто алкогольне',
-			price: 125,
+			price: 140,
 			weight: '350 мл',
 			time: '5 хв',
 			description:
@@ -1227,7 +1222,7 @@ const menuData = {
 		{
 			id: 'hotDrink1',
 			nameUk: 'Еспресо',
-			price: 40,
+			price: 45,
 			weight: '30 мл',
 			time: '5 хв',
 			description:
@@ -1237,7 +1232,7 @@ const menuData = {
 		{
 			id: 'hotDrink2',
 			nameUk: 'Еспресо з молоком',
-			price: 40,
+			price: 45,
 			weight: '80 мл',
 			time: '5 хв',
 			description:
