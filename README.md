@@ -6,6 +6,10 @@
 
 ## 🖼️ Приклад відображення меню
 
+[![Live Demo](https://img.shields.io/badge/demo-online-orange.svg?style=for-the-badge)](https://restaurant-menu-kateryna.vercel.app/)
+[![Database](https://img.shields.io/badge/Firebase-Firestore-yellow.svg?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg?style=for-the-badge)](https://github.com/RomanKozar/restaurant-menu-kateryna/releases)
+
 ![Меню ресторану](images/menu.webp)
 
 ## ✨ Особливості
