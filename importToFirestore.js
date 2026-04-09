@@ -89,7 +89,7 @@ async function importMenuData() {
 				categoryOrder = categoryMetadata.order
 			} else {
 				console.warn(
-					`Попередження: Категорія "${categoryId}" відсутня в CATEGORY_METADATA. Використовуємо ID та порядок 999.`
+					`Попередження: Категорія "${categoryId}" відсутня в CATEGORY_METADATA. Використовуємо ID та порядок 999.`,
 				)
 				categoryDisplayName = categoryId
 				categoryOrder = 999
@@ -107,7 +107,7 @@ async function importMenuData() {
 			if (totalWritesInBatch >= BATCH_SIZE) {
 				await batch.commit()
 				console.log(
-					`- Коммітовано батч (категорії). Всього операцій: ${totalWritesInBatch}`
+					`- Коммітовано батч (категорії). Всього операцій: ${totalWritesInBatch}`,
 				)
 				batch = db.batch() // Починаємо новий батч
 				totalWritesInBatch = 0
@@ -120,7 +120,7 @@ async function importMenuData() {
 						console.error(
 							`!!! Помилка: Елемент меню "${
 								item.nameUk || 'Без назви'
-							}" у категорії "${categoryId}" не має унікального ID. Він буде ПРОПУЩЕНИЙ.`
+							}" у категорії "${categoryId}" не має унікального ID. Він буде ПРОПУЩЕНИЙ.`,
 						)
 						continue
 					}
@@ -135,7 +135,7 @@ async function importMenuData() {
 					if (totalWritesInBatch >= BATCH_SIZE) {
 						await batch.commit()
 						console.log(
-							`- Коммітовано батч (страви). Всього операцій: ${totalWritesInBatch}`
+							`- Коммітовано батч (страви). Всього операцій: ${totalWritesInBatch}`,
 						)
 						batch = db.batch() // Починаємо новий батч
 						totalWritesInBatch = 0
@@ -143,7 +143,7 @@ async function importMenuData() {
 				}
 			} else {
 				console.warn(
-					`Попередження: Властивість "${categoryId}" у menuData не є масивом страв або його структура неправильна.`
+					`Попередження: Властивість "${categoryId}" у menuData не є масивом страв або його структура неправильна.`,
 				)
 			}
 		}
@@ -153,13 +153,13 @@ async function importMenuData() {
 	if (totalWritesInBatch > 0) {
 		await batch.commit()
 		console.log(
-			`- Коммітовано останній батч. Всього операцій: ${totalWritesInBatch}`
+			`- Коммітовано останній батч. Всього операцій: ${totalWritesInBatch}`,
 		)
 	}
 
 	console.log('\n----------------------------------------------------')
 	console.log(
-		`Успішно оброблено (імпортовано/оновлено) ${totalItemsProcessed} елементів меню, організованих за категоріями!`
+		`Успішно оброблено (імпортовано/оновлено) ${totalItemsProcessed} елементів меню, організованих за категоріями!`,
 	)
 	console.log('----------------------------------------------------')
 }
@@ -195,14 +195,14 @@ const imageUrlMap = new Map()
 
 async function uploadImagesToStorage() {
 	console.log(
-		'\nКрок завантаження зображень: Починаємо завантаження до Cloud Storage...'
+		'\nКрок завантаження зображень: Починаємо завантаження до Cloud Storage...',
 	)
 	const allLocalImageFullPaths = getAllImageFiles(LOCAL_IMAGES_BASE_DIR)
 	let imagesUploadedCount = 0
 
 	if (allLocalImageFullPaths.length === 0) {
 		console.warn(
-			'Попередження: У локальній директорії не знайдено жодного файлу зображення. Пропускаємо завантаження.'
+			'Попередження: У локальній директорії не знайдено жодного файлу зображення. Пропускаємо завантаження.',
 		)
 	}
 
@@ -229,13 +229,13 @@ async function uploadImagesToStorage() {
 		}
 	}
 	console.log(
-		`\nКрок завантаження зображень завершено. Успішно завантажено ${imagesUploadedCount} зображень.`
+		`\nКрок завантаження зображень завершено. Успішно завантажено ${imagesUploadedCount} зображень.`,
 	)
 }
 
 async function updateFirestoreImageLinks() {
 	console.log(
-		'\nКрок оновлення посилань: Оновлення посилань на зображення у Firestore...'
+		'\nКрок оновлення посилань: Оновлення посилань на зображення у Firestore...',
 	)
 	const categoriesSnapshot = await db.collection('categories').get()
 	let itemsUpdatedInFirestoreCount = 0
@@ -245,7 +245,7 @@ async function updateFirestoreImageLinks() {
 
 	if (categoriesSnapshot.empty) {
 		console.warn(
-			'Попередження: Колекція "categories" у Firestore порожня. Немає чого оновлювати.'
+			'Попередження: Колекція "categories" у Firestore порожня. Немає чого оновлювати.',
 		)
 	}
 
@@ -273,7 +273,7 @@ async function updateFirestoreImageLinks() {
 				if (batchOperationsFS >= BATCH_SIZE_FS) {
 					await batchFS.commit()
 					console.log(
-						`- Коммітовано батч оновлень Firestore. Оновлено ${itemsUpdatedInFirestoreCount} елементів.`
+						`- Коммітовано батч оновлень Firestore. Оновлено ${itemsUpdatedInFirestoreCount} елементів.`,
 					)
 					batchFS = db.batch()
 					batchOperationsFS = 0
@@ -283,7 +283,7 @@ async function updateFirestoreImageLinks() {
 				console.warn(
 					`Попередження: Зображення "${originalImagePathInFirestore}" для елемента "${
 						itemData.nameUk || itemDoc.id
-					}" (${categoryId}) не знайдено в мапі завантажених файлів або вже оновлено.`
+					}" (${categoryId}) не знайдено в мапі завантажених файлів або вже оновлено.`,
 				)
 			}
 		}
@@ -292,12 +292,12 @@ async function updateFirestoreImageLinks() {
 	if (batchOperationsFS > 0) {
 		await batchFS.commit()
 		console.log(
-			`- Коммітовано останній батч оновлень Firestore. Оновлено ${itemsUpdatedInFirestoreCount} елементів.`
+			`- Коммітовано останній батч оновлень Firestore. Оновлено ${itemsUpdatedInFirestoreCount} елементів.`,
 		)
 	}
 
 	console.log(
-		`\nКрок оновлення посилань завершено. Успішно оновлено ${itemsUpdatedInFirestoreCount} елементів меню у Firestore.`
+		`\nКрок оновлення посилань завершено. Успішно оновлено ${itemsUpdatedInFirestoreCount} елементів меню у Firestore.`,
 	)
 	console.log('\n----------------------------------------------------')
 	console.log('Процес завантаження зображень та оновлення Firestore ЗАВЕРШЕНО!')
