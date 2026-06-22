@@ -9,6 +9,34 @@
 let fullMenuFromFirebase = {}
 let currentDish = null
 let quantity = 1
+let imageObserver = null
+const categoryLoadPromises = new Map()
+const prefetchedModalImages = new Set()
+const priceFormatter = new Intl.NumberFormat('uk-UA', {
+	minimumFractionDigits: 2,
+	maximumFractionDigits: 2,
+})
+const FALLBACK_DISH_IMAGE = 'images/image.png'
+const IMAGE_PLACEHOLDER =
+	"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' fill='%23d8d8d8'/%3E%3C/svg%3E"
+const ui = {
+	menuContainer: null,
+	loadingMessage: null,
+	dishModal: null,
+	infoModal: null,
+	infoBtn: null,
+	closeDishModalBtn: null,
+	closeInfoModalBtn: null,
+	increaseQtyBtn: null,
+	decreaseQtyBtn: null,
+	modalImage: null,
+	modalTitle: null,
+	modalWeight: null,
+	modalTime: null,
+	modalDescription: null,
+	quantity: null,
+	modalPrice: null,
+}
 
 // === 1. Допоміжна функція створення елементів ===
 function createElement(tag, className, content) {
@@ -18,18 +46,170 @@ function createElement(tag, className, content) {
 	return el
 }
 
+function extractNumericOrder(rawId) {
+	return Number.parseInt(String(rawId || '').replace(/\D/g, ''), 10) || 0
+}
+
+function initDomCache() {
+	ui.menuContainer = document.getElementById('menuContainer')
+	ui.loadingMessage = document.getElementById('loading-message')
+	ui.dishModal = document.getElementById('dishModal')
+	ui.infoModal = document.getElementById('infoModal')
+	ui.infoBtn = document.getElementById('infoBtn')
+	ui.closeDishModalBtn = document.getElementById('closeDishModalBtn')
+	ui.closeInfoModalBtn = document.getElementById('closeInfoModalBtn')
+	ui.increaseQtyBtn = document.getElementById('increaseQtyBtn')
+	ui.decreaseQtyBtn = document.getElementById('decreaseQtyBtn')
+	ui.modalImage = document.getElementById('modalImage')
+	ui.modalTitle = document.getElementById('modalTitle')
+	ui.modalWeight = document.getElementById('modalWeight')
+	ui.modalTime = document.getElementById('modalTime')
+	ui.modalDescription = document.getElementById('modalDescription')
+	ui.quantity = document.getElementById('quantity')
+	ui.modalPrice = document.getElementById('modalPrice')
+}
+
+function initImageObserver() {
+	if (!('IntersectionObserver' in window)) return
+	imageObserver = new IntersectionObserver(
+		entries => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) return
+				loadDeferredImage(entry.target)
+				imageObserver.unobserve(entry.target)
+			})
+		},
+		{
+			rootMargin: '250px 0px',
+			threshold: 0.01,
+		},
+	)
+}
+
+function getOptimizedImageUrl(rawUrl, width = 320, quality = 75) {
+	if (!rawUrl) return FALLBACK_DISH_IMAGE
+
+	try {
+		const url = new URL(rawUrl)
+
+		// Unsplash підтримує параметри трансформації прямо в URL.
+		if (url.hostname.includes('images.unsplash.com')) {
+			url.searchParams.set('w', String(width))
+			url.searchParams.set('q', String(quality))
+			url.searchParams.set('auto', 'format')
+			url.searchParams.set('fit', 'crop')
+		}
+
+		return url.toString()
+	} catch {
+		return rawUrl
+	}
+}
+
+function isUnsplashUrl(rawUrl) {
+	try {
+		return new URL(rawUrl).hostname.includes('images.unsplash.com')
+	} catch {
+		return false
+	}
+}
+
+function buildUnsplashSrcSet(rawUrl) {
+	if (!isUnsplashUrl(rawUrl)) return ''
+	const widths = [160, 240, 320]
+	return widths
+		.map(size => `${getOptimizedImageUrl(rawUrl, size, 72)} ${size}w`)
+		.join(', ')
+}
+
+function loadDeferredImage(img) {
+	const { src } = img.dataset
+	if (!src) return
+
+	img.src = src
+	img.removeAttribute('data-src')
+}
+
+function observeOrLoadImage(img) {
+	if (imageObserver) {
+		imageObserver.observe(img)
+		return
+	}
+
+	loadDeferredImage(img)
+}
+
+async function getSnapshotWithCacheFallback(queryRef) {
+	try {
+		const cacheSnapshot = await queryRef.get({ source: 'cache' })
+		if (!cacheSnapshot.empty) return cacheSnapshot
+	} catch {
+		// Якщо кеш недоступний - просто йдемо в мережу.
+	}
+
+	return queryRef.get()
+}
+
+function createDishImage(dish) {
+	const img = createElement('img')
+	img.src = IMAGE_PLACEHOLDER
+	img.dataset.src = getOptimizedImageUrl(dish.image, 240)
+	const srcSet = buildUnsplashSrcSet(dish.image)
+	if (srcSet) {
+		img.srcset = srcSet
+		img.sizes = '(max-width: 720px) 70px, 80px'
+	}
+	img.alt = dish.nameUk || dish.name
+	img.loading = 'lazy'
+	img.decoding = 'async'
+	img.fetchPriority = 'low'
+	img.width = 80
+	img.height = 80
+	img.onerror = () => {
+		img.onerror = null
+		img.src = FALLBACK_DISH_IMAGE
+	}
+	observeOrLoadImage(img)
+	return img
+}
+
+function preloadImage(url) {
+	if (!url) return
+	if (prefetchedModalImages.has(url)) return
+
+	const image = new Image()
+	image.decoding = 'async'
+	image.src = url
+	prefetchedModalImages.add(url)
+
+	if (prefetchedModalImages.size > 180) {
+		const firstKey = prefetchedModalImages.values().next().value
+		prefetchedModalImages.delete(firstKey)
+	}
+}
+
+function prefetchDishModalImage(categoryId, dishId) {
+	const categoryData = fullMenuFromFirebase[categoryId]
+	if (!categoryData?.itemsById) return
+
+	const dish = categoryData.itemsById.get(dishId)
+	if (!dish?.image) return
+
+	preloadImage(getOptimizedImageUrl(dish.image, 900, 82))
+}
+
 // === 2. Завантаження категорій при старті ===
 async function loadMenuFromFirebase() {
-	const container = document.getElementById('menuContainer')
-	const loadingMessage = document.getElementById('loading-message')
+	const container = ui.menuContainer
+	const loadingMessage = ui.loadingMessage
 
 	try {
 		if (loadingMessage) loadingMessage.textContent = 'Завантаження категорій...'
 
-		const categoriesSnapshot = await db
+		const categoriesQuery = db
 			.collection('categories')
 			.orderBy('order')
-			.get()
+		const categoriesSnapshot = await getSnapshotWithCacheFallback(categoriesQuery)
 
 		if (categoriesSnapshot.empty) {
 			if (loadingMessage) loadingMessage.textContent = 'Меню наразі недоступне.'
@@ -45,13 +225,14 @@ async function loadMenuFromFirebase() {
 			fullMenuFromFirebase[categoryId] = {
 				name: categoryData.name,
 				items: [],
+				itemsById: new Map(),
 				isLoaded: false,
 				isLoading: false,
 			}
 
 			const sectionDiv = createElement('div', 'menu-section')
 			const sectionHeader = createElement('div', 'section-header')
-			sectionHeader.onclick = () => toggleSection(categoryId)
+			sectionHeader.dataset.categoryId = categoryId
 
 			const sectionTitle = createElement(
 				'h2',
@@ -95,6 +276,52 @@ async function loadMenuFromFirebase() {
 	}
 }
 
+async function loadCategoryItems(categoryId) {
+	const categoryData = fullMenuFromFirebase[categoryId]
+	if (!categoryData) return []
+	if (categoryData.isLoaded) return categoryData.items
+
+	const existingPromise = categoryLoadPromises.get(categoryId)
+	if (existingPromise) return existingPromise
+
+	const loadPromise = (async () => {
+		categoryData.isLoading = true
+
+		try {
+			const itemsQuery = db
+				.collection('categories')
+				.doc(categoryId)
+				.collection('items')
+			const itemsSnapshot = await getSnapshotWithCacheFallback(itemsQuery)
+
+			const items = []
+			const itemsById = new Map()
+
+			itemsSnapshot.forEach(itemDoc => {
+				const data = itemDoc.data()
+				data.id = itemDoc.id
+				data._sortOrder = extractNumericOrder(data.id)
+				items.push(data)
+				itemsById.set(data.id, data)
+			})
+
+			items.sort((a, b) => a._sortOrder - b._sortOrder)
+
+			categoryData.items = items
+			categoryData.itemsById = itemsById
+			categoryData.isLoaded = true
+
+			return items
+		} finally {
+			categoryData.isLoading = false
+			categoryLoadPromises.delete(categoryId)
+		}
+	})()
+
+	categoryLoadPromises.set(categoryId, loadPromise)
+	return loadPromise
+}
+
 // === 3. Нотатки для секцій (локальні) ===
 const sectionNotes = {
 	breakfast: [
@@ -120,12 +347,10 @@ function renderSection(categoryId, gridId, items) {
 
 	items.forEach(dish => {
 		const item = createElement('div', 'menu-item')
-		item.onclick = () => openModal(categoryId, dish.id)
+		item.dataset.categoryId = categoryId
+		item.dataset.dishId = dish.id
 
-		const img = createElement('img')
-		img.src = dish.image
-		img.alt = dish.nameUk || dish.name
-		img.loading = 'lazy'
+		const img = createDishImage(dish)
 
 		const itemInfo = createElement('div', 'item-info')
 		const itemName = createElement('div', 'item-name', dish.nameUk || dish.name)
@@ -141,7 +366,7 @@ function renderSection(categoryId, gridId, items) {
 		const itemPrice = createElement(
 			'div',
 			'item-price',
-			`₴ ${dish.price.toFixed(2)}`,
+			`₴ ${priceFormatter.format(dish.price)}`,
 		)
 
 		item.append(img, itemInfo, itemPrice)
@@ -167,38 +392,17 @@ async function toggleSection(categoryId) {
 		if (icon) icon.style.transform = 'rotate(180deg)'
 
 		const categoryData = fullMenuFromFirebase[categoryId]
-		if (categoryData && !categoryData.isLoaded && !categoryData.isLoading) {
-			categoryData.isLoading = true
+		if (categoryData && !categoryData.isLoaded) {
 			if (grid)
 				grid.innerHTML =
 					'<p style="text-align:center; padding:20px;">Завантаження страв...</p>'
 
 			try {
-				const itemsSnapshot = await db
-					.collection('categories')
-					.doc(categoryId)
-					.collection('items')
-					.get()
-
-				categoryData.items = []
-				itemsSnapshot.forEach(itemDoc => {
-					const data = itemDoc.data()
-					data.id = itemDoc.id
-					categoryData.items.push(data)
-				})
-
-				// ⭐ СОРТУВАННЯ ЗА ЧИСЛОМ В ID (щоб Вареники 9 та 10 йшли в кінці)
-				categoryData.items.sort((a, b) => {
-					const numA = parseInt(a.id.replace(/\D/g, '')) || 0
-					const numB = parseInt(b.id.replace(/\D/g, '')) || 0
-					return numA - numB
-				})
-
-				categoryData.isLoaded = true
+				const items = await loadCategoryItems(categoryId)
 				if (grid) grid.innerHTML = ''
 
-				if (categoryData.items.length > 0) {
-					renderSection(categoryId, categoryId + '-grid', categoryData.items)
+				if (items.length > 0) {
+					renderSection(categoryId, categoryId + '-grid', items)
 				} else {
 					if (grid)
 						grid.innerHTML =
@@ -207,10 +411,11 @@ async function toggleSection(categoryId) {
 			} catch (error) {
 				console.error('Помилка завантаження страв:', error)
 			} finally {
-				categoryData.isLoading = false
-				setTimeout(() => {
+				requestAnimationFrame(() => {
+					// Якщо користувач закрив секцію під час async-завантаження, не розкриваємо її знову.
+					if (!content.classList.contains('open')) return
 					content.style.maxHeight = content.scrollHeight + 'px'
-				}, 50)
+				})
 			}
 		}
 	} else {
@@ -224,68 +429,109 @@ function openModal(categoryId, dishId) {
 	const categoryData = fullMenuFromFirebase[categoryId]
 	if (!categoryData) return
 
-	currentDish = categoryData.items.find(dish => dish.id === dishId)
+	currentDish = categoryData.itemsById?.get(dishId)
 	if (!currentDish) return
 
 	quantity = 1
-	const modal = document.getElementById('dishModal')
-
-	document.getElementById('modalImage').src = currentDish.image
-	document.getElementById('modalTitle').textContent =
-		currentDish.nameUk || currentDish.name
-	document.getElementById('modalWeight').textContent = currentDish.weight || '-'
-	document.getElementById('modalTime').textContent = currentDish.time || '-'
-	document.getElementById('modalDescription').textContent =
-		currentDish.description || ''
-	document.getElementById('quantity').textContent = quantity
+	const modal = ui.dishModal
+	const modalImage = ui.modalImage
+	modalImage.loading = 'eager'
+	modalImage.decoding = 'async'
+	modalImage.fetchPriority = 'high'
+	modalImage.src = getOptimizedImageUrl(currentDish.image, 900, 82)
+	modalImage.onerror = () => {
+		modalImage.onerror = null
+		modalImage.src = FALLBACK_DISH_IMAGE
+	}
+	ui.modalTitle.textContent = currentDish.nameUk || currentDish.name
+	ui.modalWeight.textContent = currentDish.weight || '-'
+	ui.modalTime.textContent = currentDish.time || '-'
+	ui.modalDescription.textContent = currentDish.description || ''
+	ui.quantity.textContent = quantity
 
 	updatePrice()
 	modal.classList.add('active')
 }
 
 function closeModal() {
-	document.getElementById('dishModal').classList.remove('active')
+	ui.dishModal.classList.remove('active')
 }
 
 // === 7. Контакти та ціна ===
 function openInfoModal() {
-	document.getElementById('infoModal').classList.add('active')
+	ui.infoModal.classList.add('active')
 }
 function closeInfoModal() {
-	document.getElementById('infoModal').classList.remove('active')
+	ui.infoModal.classList.remove('active')
 }
 
 function increaseQuantity() {
 	quantity++
-	document.getElementById('quantity').textContent = quantity
+	ui.quantity.textContent = quantity
 	updatePrice()
 }
 function decreaseQuantity() {
 	if (quantity > 1) {
 		quantity--
-		document.getElementById('quantity').textContent = quantity
+		ui.quantity.textContent = quantity
 		updatePrice()
 	}
 }
 
 function updatePrice() {
-	const totalPrice = (currentDish.price * quantity).toFixed(2)
-	document.getElementById('modalPrice').textContent = totalPrice
+	if (!currentDish || !ui.modalPrice) return
+	const totalPrice = currentDish.price * quantity
+	ui.modalPrice.textContent = priceFormatter.format(totalPrice)
 }
 
 // === 8. Ініціалізація ===
+function bindUiEvents() {
+	if (ui.menuContainer) {
+		ui.menuContainer.addEventListener('click', e => {
+			const header = e.target.closest('.section-header')
+			if (header && ui.menuContainer.contains(header)) {
+				const { categoryId } = header.dataset
+				if (categoryId) toggleSection(categoryId)
+				return
+			}
+
+			const menuItem = e.target.closest('.menu-item')
+			if (menuItem && ui.menuContainer.contains(menuItem)) {
+				const { categoryId, dishId } = menuItem.dataset
+				if (categoryId && dishId) openModal(categoryId, dishId)
+			}
+		})
+
+		ui.menuContainer.addEventListener('mouseover', e => {
+			const menuItem = e.target.closest('.menu-item')
+			if (!menuItem || !ui.menuContainer.contains(menuItem)) return
+
+			const { categoryId, dishId } = menuItem.dataset
+			if (categoryId && dishId) prefetchDishModalImage(categoryId, dishId)
+		})
+	}
+
+	ui.infoBtn?.addEventListener('click', openInfoModal)
+	ui.closeDishModalBtn?.addEventListener('click', closeModal)
+	ui.closeInfoModalBtn?.addEventListener('click', closeInfoModal)
+	ui.increaseQtyBtn?.addEventListener('click', increaseQuantity)
+	ui.decreaseQtyBtn?.addEventListener('click', decreaseQuantity)
+
+	if (ui.dishModal) {
+		ui.dishModal.addEventListener('click', e => {
+			if (e.target === ui.dishModal) closeModal()
+		})
+	}
+	if (ui.infoModal) {
+		ui.infoModal.addEventListener('click', e => {
+			if (e.target === ui.infoModal) closeInfoModal()
+		})
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+	initDomCache()
+	initImageObserver()
+	bindUiEvents()
 	loadMenuFromFirebase()
-
-	const dishModal = document.getElementById('dishModal')
-	const infoModal = document.getElementById('infoModal')
-
-	dishModal.addEventListener(
-		'click',
-		e => e.target === dishModal && closeModal(),
-	)
-	infoModal.addEventListener(
-		'click',
-		e => e.target === infoModal && closeInfoModal(),
-	)
 })

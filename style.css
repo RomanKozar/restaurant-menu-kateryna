@@ -55,6 +55,8 @@ body {
 	margin: 10px 0;
 	border-radius: 8px;
 	overflow: hidden;
+	content-visibility: auto;
+	contain-intrinsic-size: 1px 520px;
 }
 
 .section-header {
@@ -162,6 +164,7 @@ body {
 	object-fit: cover;
 	border-radius: 8px;
 	margin-right: 15px;
+	background: rgba(0, 0, 0, 0.08);
 }
 
 .item-info {
@@ -306,6 +309,7 @@ body {
 	object-fit: cover;
 	border-radius: 8px;
 	margin-bottom: 20px;
+	background: rgba(0, 0, 0, 0.08);
 }
 
 .modal-title {

@@ -3,6 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+		<link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+		<link
+			rel="preconnect"
+			href="https://firestore.googleapis.com"
+			crossorigin
+		/>
+		<link rel="preconnect" href="https://firebasestorage.googleapis.com" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Kateryna - Меню</title>
 		<link rel="icon" type="image/png" href="logo3.png" />
@@ -11,7 +18,7 @@
 	<body>
 		<div class="header">
 			<h1>Kateryna</h1>
-			<button class="info-btn" onclick="openInfoModal()">ⓘ</button>
+			<button class="info-btn" id="infoBtn">ⓘ</button>
 		</div>
 
 		<div class="container" id="menuContainer">
@@ -26,7 +33,7 @@
 		<!-- Dish Modal -->
 		<div class="modal" id="dishModal">
 			<div class="modal-content">
-				<button class="close-btn" onclick="closeModal()">✕</button>
+				<button class="close-btn" id="closeDishModalBtn">✕</button>
 				<img class="modal-image" id="modalImage" src="" alt="" />
 				<h2 class="modal-title" id="modalTitle"></h2>
 				<div class="modal-details">
@@ -38,9 +45,9 @@
 				<p class="modal-description" id="modalDescription"></p>
 				<div class="modal-footer">
 					<div class="quantity-control">
-						<button onclick="decreaseQuantity()">−</button>
+						<button id="decreaseQtyBtn">−</button>
 						<span>Кількість: <span id="quantity">1</span></span>
-						<button onclick="increaseQuantity()">+</button>
+						<button id="increaseQtyBtn">+</button>
 					</div>
 					<div class="modal-price-section">
 						<div class="modal-price-label">Разом:</div>
@@ -53,7 +60,7 @@
 		<!-- Info Modal -->
 		<div class="modal" id="infoModal">
 			<div class="info-modal-content">
-				<button class="close-btn" onclick="closeInfoModal()">✕</button>
+				<button class="close-btn" id="closeInfoModalBtn">✕</button>
 				<h2>Контакти</h2>
 				<div class="info-item">
 					<strong>📞 Телефони:</strong>
@@ -93,12 +100,16 @@
 			// Initialize Firebase
 			const app = firebase.initializeApp(firebaseConfig)
 			const db = app.firestore()
+			db.enablePersistence({ synchronizeTabs: true }).catch(err => {
+				// На деяких браузерах/режимах (private mode, multi-tab lock) кеш може бути недоступний.
+				console.warn('Firestore cache unavailable:', err?.code || err)
+			})
 
 			// ⭐ ДОДАЙТЕ ЦЕ - перевірка готовності
 			console.log('Firebase ініціалізовано, db готовий:', !!db)
 		</script>
 
-		<script src="script.js?v=2"></script>
+		<script src="script.js?v=4"></script>
 
 		<!-- Vercel Analytics -->
 		<script defer src="/_vercel/insights/script.js"></script>
