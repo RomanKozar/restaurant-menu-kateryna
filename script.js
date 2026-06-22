@@ -141,13 +141,17 @@ function observeOrLoadImage(img) {
 
 async function getSnapshotWithCacheFallback(queryRef) {
 	try {
-		const cacheSnapshot = await queryRef.get({ source: 'cache' })
-		if (!cacheSnapshot.empty) return cacheSnapshot
-	} catch {
-		// Якщо кеш недоступний - просто йдемо в мережу.
+		// Спочатку беремо актуальні дані з сервера, щоб бачити свіжі зміни після імпорту.
+		return await queryRef.get({ source: 'server' })
+	} catch (serverError) {
+		// Якщо мережа недоступна - fallback на кеш.
+		try {
+			return await queryRef.get({ source: 'cache' })
+		} catch {
+			// Якщо немає і кешу, кидаємо початкову помилку мережі.
+			throw serverError
+		}
 	}
-
-	return queryRef.get()
 }
 
 function createDishImage(dish) {

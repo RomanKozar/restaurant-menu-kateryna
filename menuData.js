@@ -447,6 +447,17 @@ const menuData = {
 			image:
 				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Теплий салат з курячою печінкою</text></svg>",
 		},
+		{
+			id: 'salad8',
+			nameUk: 'Салат з печеним буряком та молодим сиром',
+			price: 235,
+			weight: '300 г',
+			time: '15 хв',
+			description:
+				'Салат із запеченим буряком, молодим сиром, міксом зелені та легкою авторською заправкою.',
+			image:
+				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%2380C080' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='16'>Салат з печеним буряком</text></svg>",
+		},
 	],
 	sides: [
 		{
@@ -891,6 +902,17 @@ const menuData = {
 			description:
 				'Класичний білий пломбір із топінгом на вибір: шоколад, вишня або карамель.',
 			image: '/images/desserts/morozivo-bile.webp',
+		},
+		{
+			id: 'dessert6',
+			nameUk: 'Морозиво-десерт',
+			price: 115,
+			weight: '200 г',
+			time: '10 хв',
+			description:
+				'Ніжний десерт на основі морозива з солодким топінгом.',
+			image:
+				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23A5D6A7' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Морозиво-десерт</text></svg>",
 		},
 	],
 	vodka: [
@@ -1402,6 +1424,26 @@ const menuData = {
 			time: '-',
 			description: 'Склад: свіжа малина або малиновий соус',
 			image: '/images/extras/maluna.webp',
+		},
+		{
+			id: 'extra9',
+			nameUk: 'Хлібний кошик',
+			price: 25,
+			weight: '150 г',
+			time: '-',
+			description: 'Асорті свіжого хліба до основних страв.',
+			image:
+				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23C49A6C' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Хлібний кошик</text></svg>",
+		},
+		{
+			id: 'extra10',
+			nameUk: 'Підсмажений хліб',
+			price: 35,
+			weight: '120 г',
+			time: '10 хв',
+			description: 'Хрусткий підсмажений хліб із золотистою скоринкою.',
+			image:
+				"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><rect fill='%23B8834B' width='300' height='300'/><text x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23fff' font-size='18'>Підсмажений хліб</text></svg>",
 		},
 	],
 }
